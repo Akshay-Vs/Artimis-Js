@@ -29,7 +29,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@artimisjs/eslint-config": "workspace:*",
     "@artimisjs/typescript-config": "workspace:*",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.5.0",

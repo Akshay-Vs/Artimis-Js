@@ -1,7 +1,6 @@
-'use client';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Text from '../Typography/Text';
 
 type DropDownSelectProps = {

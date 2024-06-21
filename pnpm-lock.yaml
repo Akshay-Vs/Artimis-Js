@@ -29,7 +29,7 @@ importers:
         version: 3.2.5
       storybook:
         specifier: ^8.1.10
-        version: 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))
+        version: 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       turbo:
         specifier: ^2.0.4
         version: 2.0.4
@@ -136,6 +136,18 @@ importers:
       '@eslint/js':
         specifier: ^9.5.0
         version: 9.5.0
+      '@fortawesome/fontawesome-svg-core':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/free-brands-svg-icons':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/free-solid-svg-icons':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/react-fontawesome':
+        specifier: ^0.2.2
+        version: 0.2.2(@fortawesome/fontawesome-svg-core@6.5.2)(react@18.3.1)
       '@storybook/addon-essentials':
         specifier: ^8.1.10
         version: 8.1.10(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1369,6 +1381,28 @@ packages:
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2':
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
+
+  '@fortawesome/fontawesome-common-types@6.5.2':
+    resolution: {integrity: sha512-gBxPg3aVO6J0kpfHNILc+NMhXnqHumFxOmjYCFfOiLZfwhnnfhtsdA2hfJlDnj+8PjAs6kKQPenOTKj3Rf7zHw==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/fontawesome-svg-core@6.5.2':
+    resolution: {integrity: sha512-5CdaCBGl8Rh9ohNdxeeTMxIj8oc3KNBgIeLMvJosBMdslK/UnEB8rzyDRrbKdL1kDweqBPo4GT9wvnakHWucZw==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-brands-svg-icons@6.5.2':
+    resolution: {integrity: sha512-zi5FNYdmKLnEc0jc0uuHH17kz/hfYTg4Uei0wMGzcoCL/4d3WM3u1VMc0iGGa31HuhV5i7ZK8ZlTCQrHqRHSGQ==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-solid-svg-icons@6.5.2':
+    resolution: {integrity: sha512-QWFZYXFE7O1Gr1dTIp+D6UcFUF0qElOnZptpi7PBUMylJh+vFmIedVe1Ir6RM1t2tEQLLSV1k7bR4o92M+uqlw==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/react-fontawesome@0.2.2':
+    resolution: {integrity: sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      react: '>=16.3'
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -7501,6 +7535,26 @@ snapshots:
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2': {}
 
+  '@fortawesome/fontawesome-common-types@6.5.2': {}
+
+  '@fortawesome/fontawesome-svg-core@6.5.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.5.2
+
+  '@fortawesome/free-brands-svg-icons@6.5.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.5.2
+
+  '@fortawesome/free-solid-svg-icons@6.5.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.5.2
+
+  '@fortawesome/react-fontawesome@0.2.2(@fortawesome/fontawesome-svg-core@6.5.2)(react@18.3.1)':
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.5.2
+      prop-types: 15.8.1
+      react: 18.3.1
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.2
@@ -8089,7 +8143,7 @@ snapshots:
       telejson: 7.2.0
       tiny-invariant: 1.3.3
 
-  '@storybook/cli@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))':
+  '@storybook/cli@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/types': 7.24.7
@@ -8097,7 +8151,7 @@ snapshots:
       '@storybook/codemod': 8.1.10
       '@storybook/core-common': 8.1.10(prettier@3.2.5)
       '@storybook/core-events': 8.1.10
-      '@storybook/core-server': 8.1.10(prettier@3.2.5)
+      '@storybook/core-server': 8.1.10(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/csf-tools': 8.1.10
       '@storybook/node-logger': 8.1.10
       '@storybook/telemetry': 8.1.10(prettier@3.2.5)
@@ -8220,7 +8274,7 @@ snapshots:
       '@storybook/csf': 0.1.8
       ts-dedent: 2.2.0
 
-  '@storybook/core-server@8.1.10(prettier@3.2.5)':
+  '@storybook/core-server@8.1.10(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@aw-web-design/x-default-browser': 1.4.126
       '@babel/core': 7.24.7
@@ -10292,7 +10346,7 @@ snapshots:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.1
       get-tsconfig: 4.7.2
@@ -10339,6 +10393,16 @@ snapshots:
       '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.3.3)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.0)(eslint@8.57.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0):
+    dependencies:
+      debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.3.3)
+      eslint: 8.57.0
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.0)(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
@@ -12691,9 +12755,9 @@ snapshots:
 
   store2@2.14.3: {}
 
-  storybook@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7)):
+  storybook@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@storybook/cli': 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))
+      '@storybook/cli': 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@babel/preset-env'
       - bufferutil

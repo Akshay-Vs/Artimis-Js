@@ -1,6 +1,6 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 
 type InputHTMLAttributesWithIcon = InputHTMLAttributes<HTMLInputElement> & {
   icon?: IconProp;

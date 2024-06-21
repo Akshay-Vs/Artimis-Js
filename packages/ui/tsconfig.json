@@ -1,9 +1,17 @@
 {
-  "files": [],
+  "extends": "@artimis/typescript-config/vite-library.json",
+  "compilerOptions": {
+    "paths": {
+      "artimis": [
+        "./components/main.ts"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "components"
+  ],
   "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
     {
       "path": "./tsconfig.node.json"
     }

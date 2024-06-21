@@ -133,6 +133,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@artimis/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       '@artimis/vite-config':
         specifier: workspace:*
         version: link:../vite-config
@@ -169,9 +172,18 @@ importers:
 
   packages/vite-config:
     devDependencies:
+      '@artimis/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@types/node':
+        specifier: ^20
+        version: 20.11.24
       '@vitejs/plugin-react-swc':
         specifier: ^3.5.0
         version: 3.7.0(@swc/helpers@0.5.11)(vite@5.3.1(@types/node@20.11.24))
+      typescript:
+        specifier: ^5
+        version: 5.4.5
       vite:
         specifier: ^5.3.1
         version: 5.3.1(@types/node@20.11.24)

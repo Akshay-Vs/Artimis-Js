@@ -1,5 +1,10 @@
+import { HelloWorld } from '../components/HelloWorld/HelloWorld';
 function App() {
-	return <>artimisjs Component library</>;
+  return (
+    <main className="flex justify-center items-center min-h-[100vh]">
+      <HelloWorld />
+    </main>
+  );
 }
 
 export default App;

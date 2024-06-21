@@ -5,8 +5,14 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prittier"
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', '.turbo', '.next', 'node_modules', '**/*.json', '**/*.js', 'public'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
@@ -15,4 +21,10 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+
+  overrides: {
+    env: {
+      jest: true
+    }
+  }
 }

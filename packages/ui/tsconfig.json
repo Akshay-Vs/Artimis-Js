@@ -5,7 +5,7 @@
       "artimisjs": ["./components/index.ts"]
     }
   },
-  "include": ["src", "components", "vite.config.ts"],
+  "include": ["src", "components", "vite.config.ts", "src/index.scss"],
   "references": [
     {
       "path": "./tsconfig.node.json"

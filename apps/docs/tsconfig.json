@@ -1,5 +1,5 @@
 {
-  "extends": "@artimis/typescript-config/nextjs.json",
+  "extends": "@artimisjs/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [
       {

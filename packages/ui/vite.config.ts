@@ -10,8 +10,8 @@ export default defineConfig({
     // output entry settings
     lib: {
       entry: resolve(__dirname, 'components/index.ts'),
-      name: 'artimis',
-      fileName: 'artimis',
+      name: 'artimisjs',
+      fileName: 'artimisjs',
     },
     // bundler optiona
     rollupOptions: {

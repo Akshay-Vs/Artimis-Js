@@ -1,4 +1,4 @@
-# @artimis/typescript-config
+# @artimisjs/typescript-config
 
 ## 0.1.0
 

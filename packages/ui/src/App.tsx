@@ -1,5 +1,5 @@
 function App() {
-	return <>Artimis Component library</>;
+	return <>artimisjs Component library</>;
 }
 
 export default App;

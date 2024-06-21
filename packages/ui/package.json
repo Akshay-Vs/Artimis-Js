@@ -1,17 +1,17 @@
 {
-	"name": "@artimis/ui",
+	"name": "@artimisjs/ui",
 	"private": false,
 	"version": "0.0.1",
 	"type": "module",
 	"files": [
 		"dist"
 	],
-	"main": "./dist/artimis.umd.cjs",
-	"module": "./dist/artimis.js",
+	"main": "./dist/artimisjs.umd.cjs",
+	"module": "./dist/artimisjs.js",
 	"exports": {
 		".": {
-			"import": "./dist/artimis.js",
-			"require": "./dist/artimis.umd.js"
+			"import": "./dist/artimisjs.js",
+			"require": "./dist/artimisjs.umd.js"
 		},
 		"./dist/style.css": "./dist/style.css"
 	},
@@ -29,7 +29,7 @@
 		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
-		"@artimis/typescript-config": "workspace:*",
+		"@artimisjs/typescript-config": "workspace:*",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
 		"@typescript-eslint/eslint-plugin": "^7.13.1",

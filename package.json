@@ -7,7 +7,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
-    "test": "echo test"
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.5",

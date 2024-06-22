@@ -1,6 +1,5 @@
 import React, { createContext } from 'react';
-import { ContextType } from '../types';
-import { ProviderType } from '../types/ProviderType';
+import { ContextType, ProviderType } from '../types';
 
 // TODO: ADD TYPES
 const StyleContext = createContext<ContextType<any>>({

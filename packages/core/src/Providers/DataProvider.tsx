@@ -1,6 +1,5 @@
 import React, { createContext } from 'react';
-import { ContextType } from '../types';
-import { ProviderType } from '../types/ProviderType';
+import { ContextType, ProviderType } from '../types';
 
 const DataContext = createContext<ContextType<any>>({
   // TODO: Replace the type

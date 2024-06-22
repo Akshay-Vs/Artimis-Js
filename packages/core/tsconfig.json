@@ -5,10 +5,17 @@
     "jsx": "react",
     "paths": {
       "artimisjs": ["./components/index.ts"],
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "components", "vite.config.ts", "src/index.scss", "utils"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "components",
+    "vite.config.ts",
+    "src/index.scss",
+    "utils"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

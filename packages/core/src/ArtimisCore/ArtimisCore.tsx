@@ -1,22 +1,27 @@
-import { HTMLAttributes, PropsWithChildren } from 'react';
-import { DataProvider } from '../Providers/DataProvider';
-import { StyleProvider } from '../Providers/StyleProvider';
-import { ProviderType } from '../types/ProviderType';
+import { HTMLAttributes, useState } from 'react';
+import { DataContext } from '../Contexts/DataContext';
+import { StyleContext } from '../Contexts/StyleContext';
+import { StyleType } from '../types';
 
-type ArtimisCoreProps = PropsWithChildren &
-  HTMLAttributes<HTMLDivElement> & {
-    dataProvider: ProviderType<any>;
-    styleProvider: ProviderType<any>;
-  };
+type ArtimisCoreProps = HTMLAttributes<HTMLDivElement> & {
+  dataProvider: any;
+  styleProvider: StyleType;
+  children: React.ReactNode;
+};
 
 export const ArtimisCore = ({
   children,
   dataProvider,
   styleProvider,
 }: ArtimisCoreProps) => {
+  const [data] = useState(dataProvider); // TODO
+  const [style] = useState(styleProvider);
+
   return (
-    <DataProvider value={dataProvider.value}>
-      <StyleProvider value={styleProvider.value}>{children}</StyleProvider>
-    </DataProvider>
+    <DataContext.Provider value={{ data }}>
+      <StyleContext.Provider value={{ style }}>
+        {children}
+      </StyleContext.Provider>
+    </DataContext.Provider>
   );
 };

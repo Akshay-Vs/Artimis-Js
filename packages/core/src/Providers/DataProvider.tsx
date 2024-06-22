@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, createContext, useState } from 'react';
+import React, { createContext } from 'react';
 import { ContextType } from '../types';
 import { ProviderType } from '../types/ProviderType';
 

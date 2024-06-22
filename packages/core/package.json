@@ -1,6 +1,6 @@
 {
   "name": "@artimisjs/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Artimis Core Library",
   "type": "module",
   "private": false,

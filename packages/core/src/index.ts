@@ -1,1 +1,1 @@
-console.log("Core")
+export { ArtimisCore } from "./ArtimisCore/ArtimisCore"

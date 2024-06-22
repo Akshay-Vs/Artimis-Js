@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { ContextType, ProviderType } from '../types';
 
 // TODO: ADD TYPES

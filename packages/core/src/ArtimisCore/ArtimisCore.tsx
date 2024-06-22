@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import { HTMLAttributes, PropsWithChildren } from 'react';
 import { DataProvider } from '../Providers/DataProvider';
 import { StyleProvider } from '../Providers/StyleProvider';
 import { ProviderType } from '../types/ProviderType';
@@ -9,7 +9,7 @@ type ArtimisCoreProps = PropsWithChildren &
     styleProvider: ProviderType<any>;
   };
 
-const ArtimisCore = ({
+export const ArtimisCore = ({
   children,
   dataProvider,
   styleProvider,
@@ -20,5 +20,3 @@ const ArtimisCore = ({
     </DataProvider>
   );
 };
-
-export default ArtimisCore;

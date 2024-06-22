@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { ContextType, ProviderType } from '../types';
 
 const DataContext = createContext<ContextType<any>>({

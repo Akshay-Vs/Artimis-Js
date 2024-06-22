@@ -1,7 +1,7 @@
 {
   "name": "@artimisjs/ui",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "files": [
     "dist"
@@ -13,7 +13,7 @@
       "import": "./dist/artimis-ui.js",
       "require": "./dist/artimis-ui.umd.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./style": "./dist/style.css"
   },
   "sideEffects": false,
   "scripts": {

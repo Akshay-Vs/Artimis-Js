@@ -7,7 +7,15 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["app", "components", "vite.config.ts", "app/index.scss", "utils"],
+  "include": [
+    "app",
+    "components",
+    "vite.config.ts",
+    "app/index.scss",
+    "utils",
+    "./tailwind.config.js",
+    ".eslintrc.cjs"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

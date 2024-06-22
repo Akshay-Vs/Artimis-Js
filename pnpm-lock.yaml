@@ -88,9 +88,6 @@ importers:
 
   packages/core:
     dependencies:
-      '@artimisjs/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -98,6 +95,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@artimisjs/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       '@types/jest':
         specifier: ^29.5.12
         version: 29.5.12

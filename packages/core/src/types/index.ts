@@ -1,2 +1,2 @@
-export { ContextType } from "./ContextType"
-export { ProviderType } from "./ProviderType"
+export type { ContextType } from "./ContextType"
+export type { ProviderType } from "./ProviderType"

@@ -2,12 +2,20 @@
   "extends": "@artimisjs/typescript-config/vite-library.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "jsx": "react",
     "paths": {
       "artimisjs": ["./components/index.ts"],
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["app", "components", "vite.config.ts", "app/index.scss", "utils"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "components",
+    "vite.config.ts",
+    "src/index.scss",
+    "utils"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

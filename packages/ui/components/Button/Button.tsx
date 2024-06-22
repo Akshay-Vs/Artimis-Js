@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { twMerge } from 'tailwind-merge';
+import cn from '@/utils/cn';
 
-const button = cva('transition-all duration-300', {
+const button = cva('transition-all duration-300 w-fit', {
   variants: {
     varient: {
       primary: [
@@ -68,18 +68,11 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof button> {}
 
-export const Button: React.FC<ButtonProps> = ({
-  className,
-  varient,
-  size,
-  buttonType,
-  radius,
-  ...props
-}) => (
-  <button
-    className={twMerge(
-      button({ varient, size, buttonType, className, radius })
-    )}
-    {...props}
-  />
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, varient, size, buttonType, radius, ...props }) => (
+    <button
+      className={cn(button({ varient, size, buttonType, className, radius }))}
+      {...props}
+    />
+  )
 );

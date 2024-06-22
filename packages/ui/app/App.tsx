@@ -1,7 +1,7 @@
 import { Button } from '../components';
 function App() {
   return (
-    <main className="flex flex-col justify-center items-center min-h-[100vh] gap-4">
+    <main className="flex-center flex-col min-h-[100vh] gap-4">
       <Button radius="full" size="xl">
         To be
       </Button>

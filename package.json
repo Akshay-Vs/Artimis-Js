@@ -4,6 +4,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:ui": "pnpm --recursive --filter=@artimisjs/ui dev",
+    "storybook:ui": "pnpm --recursive --filter=@artimisjs/ui storybook",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi ",

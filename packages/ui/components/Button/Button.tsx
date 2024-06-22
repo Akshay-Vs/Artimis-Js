@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import cn from '@/utils/cn';
 
-const button = cva('transition-all duration-300', {
+const button = cva('transition-all duration-300 w-fit', {
   variants: {
     varient: {
       primary: [

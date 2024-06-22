@@ -6,12 +6,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/artimisjs.umd.cjs",
-  "module": "./dist/artimisjs.js",
+  "main": "./dist/artimis-ui.umd.cjs",
+  "module": "./dist/artimis-ui.js",
   "exports": {
     ".": {
-      "import": "./dist/artimisjs.js",
-      "require": "./dist/artimisjs.umd.js"
+      "import": "./dist/artimis-ui.js",
+      "require": "./dist/artimis-ui.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },

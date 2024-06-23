@@ -1,4 +1,4 @@
-import DropDown from '@/components/DropDown/DropDown';
+import { DropDown } from '@/components/DropDown/DropDown';
 import { Button } from '../components';
 
 function App() {

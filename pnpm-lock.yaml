@@ -40,11 +40,11 @@ importers:
   apps/docs:
     dependencies:
       '@artimisjs/core':
-        specifier: workspace:*
-        version: link:../../packages/core
+        specifier: latest
+        version: 0.2.0(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@artimisjs/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
+        specifier: latest
+        version: 0.1.2
       next:
         specifier: 14.2.4
         version: 14.2.4(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
@@ -322,6 +322,12 @@ packages:
   '@ampproject/remapping@2.2.1':
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
+
+  '@artimisjs/core@0.2.0':
+    resolution: {integrity: sha512-5OGycXPd1e6u2x/oKQ4ct1Ct/9p1r76RqG99MIqoMktNxuWDAkewH84TE/QzyJ1TMYxJrYsb8dqbRGVl90c9Kg==}
+
+  '@artimisjs/ui@0.1.2':
+    resolution: {integrity: sha512-u8vd6yN2lMAx8m2LmaTsKkiysZGpILsw1mezHPMYjFLxebWRR0sPUdHa2Mt7RQXaLVxTFkBW5oCIs3LO/fkEfw==}
 
   '@aw-web-design/x-default-browser@1.4.126':
     resolution: {integrity: sha512-Xk1sIhyNC/esHGGVjL/niHLowM0csl/kFO5uawBy4IrWwy0o1G8LGt3jP6nmWGz+USxeeqbihAmp/oVZju6wug==}
@@ -6424,6 +6430,27 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.20
 
+  '@artimisjs/core@0.2.0(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      vite-tsconfig-paths: 4.3.2(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+    transitivePeerDependencies:
+      - '@types/node'
+      - rollup
+      - supports-color
+      - typescript
+      - vite
+
+  '@artimisjs/ui@0.1.2':
+    dependencies:
+      class-variance-authority: 0.7.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tailwind-merge: 2.3.0
+
   '@aw-web-design/x-default-browser@1.4.126':
     dependencies:
       default-browser-id: 3.0.0
@@ -9530,6 +9557,20 @@ snapshots:
     dependencies:
       '@vue/compiler-core': 3.4.29
       '@vue/shared': 3.4.29
+
+  '@vue/language-core@1.8.27(typescript@5.3.3)':
+    dependencies:
+      '@volar/language-core': 1.11.1
+      '@volar/source-map': 1.11.1
+      '@vue/compiler-dom': 3.4.29
+      '@vue/shared': 3.4.29
+      computeds: 0.0.1
+      minimatch: 9.0.4
+      muggle-string: 0.3.1
+      path-browserify: 1.0.1
+      vue-template-compiler: 2.7.16
+    optionalDependencies:
+      typescript: 5.3.3
 
   '@vue/language-core@1.8.27(typescript@5.5.2)':
     dependencies:
@@ -13468,6 +13509,10 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
+  tsconfck@3.1.0(typescript@5.3.3):
+    optionalDependencies:
+      typescript: 5.3.3
+
   tsconfck@3.1.0(typescript@5.5.2):
     optionalDependencies:
       typescript: 5.5.2
@@ -13749,6 +13794,23 @@ snapshots:
 
   vary@1.1.2: {}
 
+  vite-plugin-dts@3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6)):
+    dependencies:
+      '@microsoft/api-extractor': 7.43.0(@types/node@20.11.24)
+      '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
+      '@vue/language-core': 1.8.27(typescript@5.3.3)
+      debug: 4.3.4
+      kolorist: 1.8.0
+      magic-string: 0.30.10
+      typescript: 5.3.3
+      vue-tsc: 1.8.27(typescript@5.3.3)
+    optionalDependencies:
+      vite: 5.3.1(@types/node@20.11.24)(sass@1.77.6)
+    transitivePeerDependencies:
+      - '@types/node'
+      - rollup
+      - supports-color
+
   vite-plugin-dts@3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6)):
     dependencies:
       '@microsoft/api-extractor': 7.43.0(@types/node@20.11.24)
@@ -13765,6 +13827,17 @@ snapshots:
       - '@types/node'
       - rollup
       - supports-color
+
+  vite-tsconfig-paths@4.3.2(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6)):
+    dependencies:
+      debug: 4.3.4
+      globrex: 0.1.2
+      tsconfck: 3.1.0(typescript@5.3.3)
+    optionalDependencies:
+      vite: 5.3.1(@types/node@20.11.24)(sass@1.77.6)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   vite-tsconfig-paths@4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6)):
     dependencies:
@@ -13791,6 +13864,13 @@ snapshots:
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
+
+  vue-tsc@1.8.27(typescript@5.3.3):
+    dependencies:
+      '@volar/typescript': 1.11.1
+      '@vue/language-core': 1.8.27(typescript@5.3.3)
+      semver: 7.6.2
+      typescript: 5.3.3
 
   vue-tsc@1.8.27(typescript@5.5.2):
     dependencies:

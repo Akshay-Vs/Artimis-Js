@@ -1,6 +1,9 @@
 import { useContext } from "react";
-import { StyleContext } from "../Contexts/StyleContext"
+import { StyleContext } from "../contexts/StyleContext"
 
-export const useStyle = () => {
-  return useContext(StyleContext)
+const useStyle = () => {
+  const style = useContext(StyleContext)
+  return { ...style }
 }
+
+export { useStyle }

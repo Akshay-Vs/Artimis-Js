@@ -1,7 +1,7 @@
 {
   "name": "@artimisjs/ui",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "files": [
     "dist"
@@ -27,6 +27,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@artimisjs/core": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "class-variance-authority": "^0.7.0",

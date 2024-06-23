@@ -41,7 +41,7 @@ importers:
     dependencies:
       '@artimisjs/core':
         specifier: latest
-        version: 0.2.0(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        version: 0.2.0(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@artimisjs/ui':
         specifier: latest
         version: 0.1.2
@@ -169,6 +169,9 @@ importers:
 
   packages/ui:
     dependencies:
+      '@artimisjs/core':
+        specifier: workspace:*
+        version: link:../core
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -6430,11 +6433,11 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.20
 
-  '@artimisjs/core@0.2.0(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+  '@artimisjs/core@0.2.0(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       vite-tsconfig-paths: 4.3.2(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
     transitivePeerDependencies:
       - '@types/node'
@@ -10794,7 +10797,7 @@ snapshots:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.1
       get-tsconfig: 4.7.2
@@ -10834,12 +10837,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.3.3)
       eslint: 8.57.0
+      eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
@@ -13794,23 +13798,6 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-dts@3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6)):
-    dependencies:
-      '@microsoft/api-extractor': 7.43.0(@types/node@20.11.24)
-      '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
-      '@vue/language-core': 1.8.27(typescript@5.3.3)
-      debug: 4.3.4
-      kolorist: 1.8.0
-      magic-string: 0.30.10
-      typescript: 5.3.3
-      vue-tsc: 1.8.27(typescript@5.3.3)
-    optionalDependencies:
-      vite: 5.3.1(@types/node@20.11.24)(sass@1.77.6)
-    transitivePeerDependencies:
-      - '@types/node'
-      - rollup
-      - supports-color
-
   vite-plugin-dts@3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6)):
     dependencies:
       '@microsoft/api-extractor': 7.43.0(@types/node@20.11.24)
@@ -13821,6 +13808,23 @@ snapshots:
       magic-string: 0.30.10
       typescript: 5.5.2
       vue-tsc: 1.8.27(typescript@5.5.2)
+    optionalDependencies:
+      vite: 5.3.1(@types/node@20.11.24)(sass@1.77.6)
+    transitivePeerDependencies:
+      - '@types/node'
+      - rollup
+      - supports-color
+
+  vite-plugin-dts@3.9.1(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6)):
+    dependencies:
+      '@microsoft/api-extractor': 7.43.0(@types/node@20.11.24)
+      '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
+      '@vue/language-core': 1.8.27(typescript@5.3.3)
+      debug: 4.3.4
+      kolorist: 1.8.0
+      magic-string: 0.30.10
+      typescript: 5.3.3
+      vue-tsc: 1.8.27(typescript@5.3.3)
     optionalDependencies:
       vite: 5.3.1(@types/node@20.11.24)(sass@1.77.6)
     transitivePeerDependencies:

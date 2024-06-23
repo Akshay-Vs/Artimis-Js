@@ -1,1 +1,3 @@
-export { ArtimisCore } from "./ArtimisCore/ArtimisCore"
+export * from "./components"
+export * from "./hooks"
+export * from "./types"

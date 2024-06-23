@@ -1,5 +1,5 @@
-import { Button } from '@artimisjs/ui';
-export default function Home() {
+import { Button } from '../components';
+function App() {
   return (
     <main className="flex-center flex-col min-h-[100vh] gap-4">
       <Button radius="full" size="xl">
@@ -47,3 +47,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default App;

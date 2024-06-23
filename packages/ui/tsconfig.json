@@ -1,11 +1,21 @@
 {
   "extends": "@artimisjs/typescript-config/vite-library.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "artimisjs": ["./components/index.ts"]
+      "artimisjs": ["./components/index.ts"],
+      "@/*": ["./*"]
     }
   },
-  "include": ["src", "components", "vite.config.ts"],
+  "include": [
+    "app",
+    "components",
+    "vite.config.ts",
+    "app/index.scss",
+    "utils",
+    "./tailwind.config.js",
+    ".eslintrc.cjs"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

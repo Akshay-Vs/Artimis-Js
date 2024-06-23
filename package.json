@@ -4,17 +4,25 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:ui": "pnpm --recursive --filter=@artimisjs/ui dev",
+    "storybook:ui": "pnpm --recursive --filter=@artimisjs/ui storybook",
+    "build:ui": "pnpm --recursive --filter=@artimisjs/ui build",
+    "dev:docs": "pnpm --recursive --filter=docs dev",
+    "build:docs": "pnpm --recursive --filter=docs build",
+    "build:core": "pnpm --recursive --filter=core build",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi ",
     "test": "turbo run test"
   },
   "devDependencies": {
+    "@artimisjs/ui": "workspace:*",
     "@changesets/cli": "^2.27.5",
     "@types/node": "^20",
-    "prettier": "^3.2.5",
-    "turbo": "^2.0.4",
     "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "storybook": "^8.1.10",
+    "turbo": "^2.0.4",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@8.15.6",

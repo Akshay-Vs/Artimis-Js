@@ -86,4 +86,4 @@ const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
   }
 );
 
-export default DropDown;
+export { DropDown };

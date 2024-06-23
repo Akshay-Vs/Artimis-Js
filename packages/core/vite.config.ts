@@ -9,17 +9,18 @@ export default defineConfig({
   build: {
     // output entry settings
     lib: {
-      entry: resolve(__dirname, 'components/index.ts'),
-      name: 'artimis-ui',
-      fileName: 'artimis-ui',
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'artimis-core',
+      fileName: 'artimis-core',
     },
-    // bundler optiona
+    // bundler option
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'jsxRuntime'
         },
       },
     },

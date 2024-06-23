@@ -1,11 +1,9 @@
+import { DropDown } from '@/components/DropDown/DropDown';
 import { Button } from '../components';
+
 function App() {
   return (
-    <main className="flex-center flex-col min-h-[100vh] gap-4">
-      <Button radius="full" size="xl">
-        To be
-      </Button>
-
+    <main className="flex-center flex-col gap-4 mt-6">
       <div className="flex-center gap-4">
         <Button>Primary</Button>
         <Button varient="secondary">Secondary</Button>
@@ -44,6 +42,7 @@ function App() {
         </Button>
       </div>
       <Button buttonType="icon">Full</Button>
+      <DropDown title="select" radius="full" options={['Hello', 'World']} />
     </main>
   );
 }

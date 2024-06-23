@@ -24,8 +24,7 @@ const button = cva('transition-all duration-300 w-fit', {
         'text-white',
         'border-2',
         'border-blue-500',
-        'hover:bg-white',
-        'hover:text-blue-500',
+        'hover:bg-blue-700',
       ],
       outlined: [
         'bg-white',
@@ -69,8 +68,9 @@ export interface ButtonProps
     VariantProps<typeof button> {}
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, varient, size, buttonType, radius, ...props }) => (
+  ({ className, varient, size, buttonType, radius, ...props }, ref) => (
     <button
+      ref={ref}
       className={cn(button({ varient, size, buttonType, className, radius }))}
       {...props}
     />

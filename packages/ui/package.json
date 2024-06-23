@@ -1,7 +1,7 @@
 {
   "name": "@artimisjs/ui",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.1.3",
   "type": "module",
   "files": [
     "dist"
@@ -13,7 +13,7 @@
       "import": "./dist/artimis-ui.js",
       "require": "./dist/artimis-ui.umd.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./style": "./dist/style.css"
   },
   "sideEffects": false,
   "scripts": {
@@ -27,8 +27,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@artimisjs/core": "workspace:*",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@artimisjs/eslint-config": "workspace:*",
@@ -54,8 +58,6 @@
     "@typescript-eslint/parser": "^7.13.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.19",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "15.0.0-rc.0",
@@ -69,7 +71,6 @@
     "husky": "^9.0.11",
     "postcss": "^8.4.38",
     "sass": "^1.77.6",
-    "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
     "typescript-eslint": "^7.13.1",

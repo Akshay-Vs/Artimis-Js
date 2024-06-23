@@ -1,5 +1,5 @@
 import React from 'react';
-export type TextProps = {
+type TextProps = {
   size?:
     | 'xs'
     | 'sm'
@@ -79,4 +79,5 @@ const Text = ({ size = 'md', children, className }: TextProps) => {
   );
 };
 
-export default Text;
+export { Text };
+export type { TextProps };

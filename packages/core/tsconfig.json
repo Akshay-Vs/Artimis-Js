@@ -1,24 +1,25 @@
 {
   "extends": "@artimisjs/typescript-config/vite-library.json",
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
-    "jsx": "react",
     "paths": {
-      "artimisjs": ["./components/index.ts"],
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@hooks": ["@/src/hooks/*"],
+      "@contexts": ["@/src/contexts/*"]
     }
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "components",
-    "vite.config.ts",
-    "src/index.scss",
-    "utils"
+    "next-env.d.ts",
+    "next.config.js",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "vite.config.ts"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "exclude": ["node_modules"]
 }

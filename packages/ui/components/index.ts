@@ -1,5 +1,7 @@
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import '../global.scss'
+import '../tailwind.scss'
 
 export { HelloWorld } from "./HelloWorld/HelloWorld"
 export { Button } from "./Button/Button"
+export { Text } from "./Typography/Text"
+export { DropDown } from "./DropDown/DropDown"

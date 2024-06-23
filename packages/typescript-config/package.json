@@ -1,9 +1,9 @@
 {
-	"name": "@artimisjs/typescript-config",
-	"version": "0.1.0",
-	"private": true,
-	"license": "MIT",
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@artimisjs/typescript-config",
+  "version": "0.2.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

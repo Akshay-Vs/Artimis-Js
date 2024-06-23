@@ -1,11 +1,12 @@
 import { HTMLAttributes, useState } from 'react';
-import { DataContext } from '../Contexts/DataContext';
-import { StyleContext } from '../Contexts/StyleContext';
-import { StyleType } from '../types';
+import { StyleContext } from '@/contexts/StyleContext';
+import { DataContext } from '@/contexts/DataContext';
+import { StyleType } from '@/types';
+import { defaultStyle } from '@/config/Style.default';
 
 type ArtimisCoreProps = HTMLAttributes<HTMLDivElement> & {
   dataProvider: any;
-  styleProvider: StyleType;
+  styleProvider?: StyleType;
   children: React.ReactNode;
 };
 
@@ -15,7 +16,7 @@ export const ArtimisCore = ({
   styleProvider,
 }: ArtimisCoreProps) => {
   const [data] = useState(dataProvider); // TODO
-  const [style] = useState(styleProvider);
+  const [style] = useState(styleProvider || defaultStyle);
 
   return (
     <DataContext.Provider value={{ data }}>

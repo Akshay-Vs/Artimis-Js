@@ -27,6 +27,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@artimisjs/core": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "class-variance-authority": "^0.7.0",

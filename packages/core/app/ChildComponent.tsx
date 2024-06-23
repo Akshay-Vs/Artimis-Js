@@ -1,9 +1,10 @@
-import { useContext } from 'react';
-import { StyleContext } from '../src/Contexts/StyleContext';
-
 const ChildComponent = () => {
-  const { style } = useContext(StyleContext);
-  return <div>{style.theme?.dark.accent}</div>;
+  return (
+    <div>
+      <h1>Artimis Core</h1>
+      <p>Hello From Artimis!!!</p>
+    </div>
+  );
 };
 
 export default ChildComponent;

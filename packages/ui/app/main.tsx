@@ -1,11 +1,14 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ArtimisCore } from '@artimisjs/core';
 import App from './App.tsx';
-import '../global.scss';
+import '../tailwind.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <ArtimisCore dataProvider={{}}>
+      <App />
+    </ArtimisCore>
   </React.StrictMode>
 );

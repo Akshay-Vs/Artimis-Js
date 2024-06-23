@@ -169,12 +169,21 @@ importers:
 
   packages/ui:
     dependencies:
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      tailwind-merge:
+        specifier: ^2.3.0
+        version: 2.3.0
     devDependencies:
       '@artimisjs/eslint-config':
         specifier: workspace:*
@@ -245,12 +254,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
-      class-variance-authority:
-        specifier: ^0.7.0
-        version: 0.7.0
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -290,9 +293,6 @@ importers:
       sass:
         specifier: ^1.77.6
         version: 1.77.6
-      tailwind-merge:
-        specifier: ^2.3.0
-        version: 2.3.0
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.4

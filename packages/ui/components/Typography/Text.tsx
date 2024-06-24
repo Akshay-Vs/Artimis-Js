@@ -11,7 +11,7 @@ type TextProps = {
     | 'huge'
     | 'xhuge'
     | 'xxhuge'
-    | 'ultrahuge';
+    | 'banner';
   children: React.ReactNode;
   className?: string;
 };
@@ -57,7 +57,7 @@ const sizes = {
     fontSize: 68,
     lineHeight: 76 / 68,
   },
-  ultrahuge: {
+  banner: {
     fontSize: 308,
     lineHeight: 82 / 68,
   },

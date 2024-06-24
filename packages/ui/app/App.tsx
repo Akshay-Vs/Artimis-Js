@@ -1,5 +1,7 @@
 import { DropDown } from '@/components/DropDown/DropDown';
 import { Button } from '../components';
+import Input from '@/components/Input/Input';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -42,7 +44,13 @@ function App() {
         </Button>
       </div>
       <Button buttonType="icon">Full</Button>
-      <DropDown title="select" radius="full" options={['Hello', 'World']} />
+      <DropDown
+        title="select"
+        radius="full"
+        varient="accent"
+        options={['Hello', 'World']}
+      />
+      <Input icon={faSearch} placeholder="Search..." />
     </main>
   );
 }

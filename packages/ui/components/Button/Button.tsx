@@ -24,7 +24,7 @@ const button = cva('transition-all duration-300 w-fit', {
         'text-white',
         'border-2',
         'border-blue-500',
-        'hover:bg-blue-700',
+        'hover:bg-blue-900',
       ],
       outlined: [
         'bg-white',
@@ -49,12 +49,13 @@ const button = cva('transition-all duration-300 w-fit', {
     },
     buttonType: {
       button: '',
-      icon: ['w-11 h-11 rounded-full flex-center p-0'],
+      icon: ['w-11', 'h-11', 'rounded-full', 'flex-center', 'p-0'],
     },
   },
   compoundVariants: [
     { varient: 'primary', size: 'md', class: 'uppercase w-fit' },
     { buttonType: 'icon', size: 'md', class: 'h-11 w-11' },
+    { buttonType: 'icon', varient: 'accent', class: 'bg-blue-700' },
   ],
   defaultVariants: {
     varient: 'primary',
@@ -63,9 +64,8 @@ const button = cva('transition-all duration-300 w-fit', {
   },
 });
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof button> {}
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof button> & {};
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, varient, size, buttonType, radius, ...props }, ref) => (

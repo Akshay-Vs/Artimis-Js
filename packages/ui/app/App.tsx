@@ -1,27 +1,27 @@
 import { DropDown } from '@/components/DropDown/DropDown';
-import { Button } from '../components';
+import { Button, ProductCard } from '../components';
 import Input from '@/components/Input/Input';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <main className="flex-center flex-col gap-4 mt-6">
-      <div className="flex-center gap-4">
+      {/* <div className="flex-center gap-4">
         <Button>Primary</Button>
-        <Button varient="secondary">Secondary</Button>
-        <Button varient="outlined">Outlined</Button>
-        <Button varient="accent">Accent</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="outlined">Outlined</Button>
+        <Button variant="accent">Accent</Button>
       </div>
 
       <div className="flex-center gap-4">
         <Button size="sm">Primary</Button>
-        <Button varient="secondary" size="md">
+        <Button variant="secondary" size="md">
           Secondary
         </Button>
-        <Button varient="outlined" size="xl">
+        <Button variant="outlined" size="xl">
           Outlined
         </Button>
-        <Button varient="accent" size="xxl">
+        <Button variant="accent" size="xxl">
           Accent
         </Button>
       </div>
@@ -30,16 +30,16 @@ function App() {
         <Button size="sm" radius="sm">
           Primary
         </Button>
-        <Button varient="secondary" size="md" radius="md">
+        <Button variant="secondary" size="md" radius="md">
           Secondary
         </Button>
-        <Button varient="outlined" size="xl" radius="xl">
+        <Button variant="outlined" size="xl" radius="xl">
           Outlined
         </Button>
-        <Button varient="accent" size="xxl" radius="xxl">
+        <Button variant="accent" size="xxl" radius="xxl">
           Accent
         </Button>
-        <Button varient="accent" size="xxl" radius="full">
+        <Button variant="accent" size="xxl" radius="full">
           Full
         </Button>
       </div>
@@ -47,10 +47,22 @@ function App() {
       <DropDown
         title="select"
         radius="full"
-        varient="accent"
+        variant="accent"
         options={['Hello', 'World']}
       />
-      <Input icon={faSearch} placeholder="Search..." />
+      <Input icon={faSearch} placeholder="Search..." /> */}
+
+      <ProductCard radius="xxxl">
+        <ProductCard.Header>Header</ProductCard.Header>
+        <ProductCard.Backdrop></ProductCard.Backdrop>
+        <ProductCard.Footer>Footer</ProductCard.Footer>
+      </ProductCard>
+
+      <ProductCard radius="xxxl" height="lg" width="full">
+        <ProductCard.Header>Header</ProductCard.Header>
+        <ProductCard.Backdrop></ProductCard.Backdrop>
+        <ProductCard.Footer>Footer</ProductCard.Footer>
+      </ProductCard>
     </main>
   );
 }

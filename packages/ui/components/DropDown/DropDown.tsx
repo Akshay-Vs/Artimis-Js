@@ -10,7 +10,7 @@ const dropDown = cva(
   'border-[2px] p-3 px-[5px] h-12 flex-center flex-col transition-all duration-300 gap-4 font-[500] relative',
   {
     variants: {
-      varient: {
+      variant: {
         primary: ['text-[#595959]', 'bg-[#fafafa]', 'border-[#e5e7eb'],
         secondary: ['text-[#000]', 'bg-[#fff]', 'border-[#000]'],
         accent: ['bg-blue-500', 'text-white', 'border-blue-500'],
@@ -30,7 +30,7 @@ const dropDown = cva(
       },
     },
     defaultVariants: {
-      varient: 'primary',
+      variant: 'primary',
       size: 'xxl',
       radius: 'full',
     },
@@ -45,24 +45,30 @@ type DropDownProps = VariantProps<typeof dropDown> & {
 };
 
 const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
-  ({
-    className,
-    title,
-    options,
-    children,
-    radius,
-    varient,
-    size,
-  }: DropDownProps) => {
+  (
+    {
+      className,
+      title,
+      options,
+      children,
+      radius,
+      variant,
+      size,
+    }: DropDownProps,
+    ref
+  ) => {
     const [selected, setSelected] = useState(title);
     const [showOptions, setShowOptions] = useState(false);
 
     return (
-      <div className={cn(dropDown({ className, size, radius, varient }))}>
+      <div
+        ref={ref}
+        className={cn(dropDown({ className, size, radius, variant }))}
+      >
         <div className="flex-center-between pl-5 gap-4 w-full">
           {selected}
           <Button
-            varient={varient}
+            variant={variant}
             size={size}
             buttonType="icon"
             onClick={() => setShowOptions((prev) => !prev)}
@@ -79,7 +85,7 @@ const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
               options={options || []}
               setSelected={setSelected}
               setShowOptions={setShowOptions}
-              varient={varient}
+              varient={variant}
             />
           )
         ) : null}

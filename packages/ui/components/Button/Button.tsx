@@ -4,7 +4,7 @@ import cn from '@/utils/cn';
 
 const button = cva('transition-all duration-300 w-fit', {
   variants: {
-    varient: {
+    variant: {
       primary: [
         'bg-white',
         'border-2',
@@ -53,12 +53,12 @@ const button = cva('transition-all duration-300 w-fit', {
     },
   },
   compoundVariants: [
-    { varient: 'primary', size: 'md', class: 'uppercase w-fit' },
+    { variant: 'primary', size: 'md', class: 'uppercase w-fit' },
     { buttonType: 'icon', size: 'md', class: 'h-11 w-11' },
-    { buttonType: 'icon', varient: 'accent', class: 'bg-blue-700' },
+    { buttonType: 'icon', variant: 'accent', class: 'bg-blue-700' },
   ],
   defaultVariants: {
-    varient: 'primary',
+    variant: 'primary',
     size: 'md',
     buttonType: 'button',
   },
@@ -68,10 +68,10 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof button> & {};
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, varient, size, buttonType, radius, ...props }, ref) => (
+  ({ className, variant, size, buttonType, radius, ...props }, ref) => (
     <button
       ref={ref}
-      className={cn(button({ varient, size, buttonType, className, radius }))}
+      className={cn(button({ variant, size, buttonType, className, radius }))}
       {...props}
     />
   )

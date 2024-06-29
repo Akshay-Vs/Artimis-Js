@@ -10,7 +10,7 @@ const options_ = cva(
       varient: {
         primary: ['text-[#595959]', 'bg-[#fafafa]', 'border-[#e5e7eb'],
         secondary: ['text-[#000]', 'bg-[#fff]', 'border-[#000]'],
-        accent: [],
+        accent: ['bg-blue-500', 'text-white', 'border-blue-500'],
       },
     },
     defaultVariants: {
@@ -19,11 +19,11 @@ const options_ = cva(
   }
 );
 
-interface OptionsProps extends VariantProps<typeof options_> {
+type OptionsProps = VariantProps<typeof options_> & {
   options: Array<string>;
   setSelected: React.Dispatch<React.SetStateAction<string>>;
   setShowOptions: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 const Options = ({
   options,
@@ -36,7 +36,7 @@ const Options = ({
       {options.map((option) => (
         <div
           key={option}
-          className="w-full hover:bg-[#f0f0f0] px-4 p-2 rounded-3xl"
+          className="w-full hover:backdrop-brightness-90 px-4 p-2 rounded-3xl"
           onClick={() => {
             setSelected(option);
             setShowOptions(false);

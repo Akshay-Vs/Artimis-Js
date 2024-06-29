@@ -6,7 +6,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 function App() {
   return (
     <main className="flex-center flex-col gap-4 mt-6">
-      {/* <div className="flex-center gap-4">
+      <div className="flex-center gap-4">
         <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
         <Button variant="outlined">Outlined</Button>
@@ -50,7 +50,7 @@ function App() {
         variant="accent"
         options={['Hello', 'World']}
       />
-      <Input icon={faSearch} placeholder="Search..." /> */}
+      <Input icon={faSearch} placeholder="Search..." />
 
       <ProductCard radius="xxxl">
         <ProductCard.Header>Header</ProductCard.Header>

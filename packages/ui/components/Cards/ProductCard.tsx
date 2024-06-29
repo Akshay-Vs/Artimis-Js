@@ -6,15 +6,16 @@ import { HTMLProps, PropsWithChildren } from 'react';
 const productCard = cva('bg-slate-200 overflow-hidden relative', {
   variants: {
     height: {
-      sm: ['h-[58vh]'],
-      md: ['h-[70vh]'],
-      lg: ['h-[82vh]'],
+      sm: ['min-h-[58vh]', 'max-h-[58vh]'],
+      md: ['min-h-[70vh]', 'max-h-[70vh]'],
+      lg: ['min-h-[82vh]', 'max-h-[82vh]'],
       fit: ['h-fit'],
+      full: ['h-full'],
     },
     width: {
-      sm: ['w-[30vw]'],
-      md: ['w-[50vw]'],
-      lg: ['w-[70vw]'],
+      sm: ['min-w-[30vw]', 'max-w-[30vw]'],
+      md: ['min-w-[50vw]', 'max-w-[50vw]'],
+      lg: ['min-w-[70vw]', 'max-w-[30vw]'],
       fit: ['w-fit'],
       full: ['w-full'],
     },

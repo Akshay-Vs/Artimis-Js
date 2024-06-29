@@ -1,11 +1,12 @@
 import { DropDown } from '@/components/DropDown/DropDown';
-import { Button, ProductCard } from '../components';
+import { Button } from '../components';
 import Input from '@/components/Input/Input';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import Products from './Products';
 
 function App() {
   return (
-    <main className="flex-center flex-col gap-4 mt-6">
+    <main className="flex-center flex-col gap-4 mt-6 max-w-[100vw]">
       <div className="flex-center gap-4">
         <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
@@ -52,17 +53,7 @@ function App() {
       />
       <Input icon={faSearch} placeholder="Search..." />
 
-      <ProductCard radius="xxxl">
-        <ProductCard.Header>Header</ProductCard.Header>
-        <ProductCard.Backdrop></ProductCard.Backdrop>
-        <ProductCard.Footer>Footer</ProductCard.Footer>
-      </ProductCard>
-
-      <ProductCard radius="xxxl" height="lg" width="full">
-        <ProductCard.Header>Header</ProductCard.Header>
-        <ProductCard.Backdrop></ProductCard.Backdrop>
-        <ProductCard.Footer>Footer</ProductCard.Footer>
-      </ProductCard>
+      <Products />
     </main>
   );
 }

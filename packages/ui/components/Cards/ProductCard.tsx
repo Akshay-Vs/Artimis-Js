@@ -15,7 +15,7 @@ const productCard = cva('bg-slate-200 overflow-hidden relative', {
     width: {
       sm: ['min-w-[30vw]', 'max-w-[30vw]'],
       md: ['min-w-[50vw]', 'max-w-[50vw]'],
-      lg: ['min-w-[70vw]', 'max-w-[30vw]'],
+      lg: ['min-w-[70vw]', 'max-w-[70vw]'],
       fit: ['w-fit'],
       full: ['w-full'],
     },
@@ -48,9 +48,17 @@ type BackdropType = PropsWithChildren & HTMLProps<HTMLDivElement> & {};
 type FooterType = PropsWithChildren & HTMLProps<HTMLDivElement> & {};
 //#endregion
 
-const ProductCard = ({ children, radius, height, width }: ProductCardType) => {
+const ProductCard = ({
+  children,
+  radius,
+  height,
+  width,
+  className,
+}: ProductCardType) => {
   return (
-    <div className={cn(productCard({ radius, height, width }))}>{children}</div>
+    <div className={cn(productCard({ radius, height, width }), className)}>
+      {children}
+    </div>
   );
 };
 
@@ -63,7 +71,9 @@ const Header = ({ children, className }: HeaderType) => {
 };
 
 const Backdrop = ({ children, className }: BackdropType) => {
-  return <div className={cn('absolute top-0', className)}>{children}</div>;
+  return (
+    <div className={cn('absolute top-0 z-[5]', className)}>{children}</div>
+  );
 };
 
 const Footer = ({ children, className }: FooterType) => {

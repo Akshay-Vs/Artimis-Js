@@ -3,6 +3,7 @@ import cn from '@/utils/cn';
 import { HTMLProps, PropsWithChildren } from 'react';
 
 //#region CVA Properties
+
 const productCard = cva('bg-slate-200 overflow-hidden relative', {
   variants: {
     height: {
@@ -34,18 +35,17 @@ const productCard = cva('bg-slate-200 overflow-hidden relative', {
     radius: 'md',
   },
 });
+
 //#endregion
 
 //#region Types
-type ProductCardType = VariantProps<typeof productCard> &
-  PropsWithChildren &
-  HTMLProps<HTMLDivElement> & {};
 
-type HeaderType = PropsWithChildren & HTMLProps<HTMLDivElement> & {};
+type CommonProps = PropsWithChildren & HTMLProps<HTMLDivElement>;
+type ProductCardType = VariantProps<typeof productCard> & CommonProps;
+type HeaderType = CommonProps;
+type BackdropType = CommonProps;
+type FooterType = CommonProps;
 
-type BackdropType = PropsWithChildren & HTMLProps<HTMLDivElement> & {};
-
-type FooterType = PropsWithChildren & HTMLProps<HTMLDivElement> & {};
 //#endregion
 
 const ProductCard = ({
@@ -54,31 +54,39 @@ const ProductCard = ({
   height,
   width,
   className,
+  ...rest
 }: ProductCardType) => {
   return (
-    <div className={cn(productCard({ radius, height, width }), className)}>
+    <div
+      className={cn(productCard({ radius, height, width }), className)}
+      {...rest}
+    >
       {children}
     </div>
   );
 };
 
-const Header = ({ children, className }: HeaderType) => {
+const Header = ({ children, className, ...rest }: HeaderType) => {
   return (
-    <div className={cn(['flex-center z-10 absolute top-8', className])}>
+    <div className={cn(['z-10 absolute top-8', className])} {...rest}>
       {children}
     </div>
   );
 };
 
-const Backdrop = ({ children, className }: BackdropType) => {
+const Backdrop = ({ children, className, ...rest }: BackdropType) => {
   return (
-    <div className={cn('absolute top-0 z-[5]', className)}>{children}</div>
+    <div className={cn('absolute top-0 z-[5]', className)} {...rest}>
+      {children}
+    </div>
   );
 };
 
-const Footer = ({ children, className }: FooterType) => {
+const Footer = ({ children, className, ...rest }: FooterType) => {
   return (
-    <div className={cn('bottom-8 z-10 absolute', className)}>{children}</div>
+    <div className={cn('bottom-8 z-10 absolute', className)} {...rest}>
+      {children}
+    </div>
   );
 };
 

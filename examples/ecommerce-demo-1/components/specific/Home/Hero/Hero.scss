@@ -1,0 +1,15 @@
+.hero {
+  &__text-gradient--1 {
+    background: -webkit-linear-gradient(#ffffff, #ffedd9, #00000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text-gradient--2 {
+    background: -webkit-linear-gradient(#ffffff, #d9fffb, #00000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

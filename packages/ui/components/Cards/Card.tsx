@@ -4,7 +4,7 @@ import { HTMLProps, PropsWithChildren } from 'react';
 
 //#region CVA Properties
 
-const productCard = cva('bg-slate-200 overflow-hidden relative', {
+const card = cva('bg-slate-200 overflow-hidden relative', {
   variants: {
     height: {
       sm: ['min-h-[58vh]', 'max-h-[58vh]'],
@@ -41,26 +41,23 @@ const productCard = cva('bg-slate-200 overflow-hidden relative', {
 //#region Types
 
 type CommonProps = PropsWithChildren & HTMLProps<HTMLDivElement>;
-type ProductCardType = VariantProps<typeof productCard> & CommonProps;
+type CardType = VariantProps<typeof card> & CommonProps;
 type HeaderType = CommonProps;
 type BackdropType = CommonProps;
 type FooterType = CommonProps;
 
 //#endregion
 
-const ProductCard = ({
+const Card = ({
   children,
   radius,
   height,
   width,
   className,
   ...rest
-}: ProductCardType) => {
+}: CardType) => {
   return (
-    <div
-      className={cn(productCard({ radius, height, width }), className)}
-      {...rest}
-    >
+    <div className={cn(card({ radius, height, width }), className)} {...rest}>
       {children}
     </div>
   );
@@ -90,8 +87,8 @@ const Footer = ({ children, className, ...rest }: FooterType) => {
   );
 };
 
-ProductCard.Header = Header;
-ProductCard.Backdrop = Backdrop;
-ProductCard.Footer = Footer;
+Card.Header = Header;
+Card.Backdrop = Backdrop;
+Card.Footer = Footer;
 
-export { ProductCard };
+export { Card };

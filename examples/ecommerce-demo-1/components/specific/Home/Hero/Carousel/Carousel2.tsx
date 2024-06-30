@@ -1,4 +1,4 @@
-import { Text } from '@/components/common';
+import { Text } from '@artimisjs/ui';
 import Image from 'next/image';
 import React from 'react';
 
@@ -19,7 +19,7 @@ const Carousel2 = () => {
         Stay Cool <br /> With Summer Wears
       </Text>
       <Text
-        size="ultrahuge"
+        size="banner"
         className="absolute top-[70%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-[5] hero__text-gradient--2"
       >
         Comfy

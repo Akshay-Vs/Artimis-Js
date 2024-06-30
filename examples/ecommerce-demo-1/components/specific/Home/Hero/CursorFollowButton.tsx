@@ -1,5 +1,5 @@
 'use client';
-import { Text } from '@/components/common';
+import { Text } from '@artimisjs/ui';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';

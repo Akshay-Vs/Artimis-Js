@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Text } from '@/components/common';
+import { Text } from '@artimisjs/ui';
 
 const Carousel1 = () => {
   return (
@@ -19,7 +19,7 @@ const Carousel1 = () => {
         Fresh Arrivals <br /> And New Selections
       </Text>
       <Text
-        size="ultrahuge"
+        size="banner"
         className="absolute top-[70%] left-[50%] origin-left -translate-x-1/2 -translate-y-1/2 z-[5] hero__text-gradient--1"
       >
         Luxury

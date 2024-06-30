@@ -1,5 +1,11 @@
 # @artimisjs/ui
 
+## 0.1.6
+
+### Patch Changes
+
+- big fixes
+
 ## 0.1.5
 
 ### Patch Changes

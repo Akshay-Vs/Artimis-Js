@@ -2,7 +2,6 @@ import { DropDown } from '@/components/DropDown/DropDown';
 import { Button } from '../components';
 import Input from '@/components/Input/Input';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import Products from './Products';
 
 function App() {
   return (
@@ -52,8 +51,6 @@ function App() {
         options={['Hello', 'World']}
       />
       <Input icon={faSearch} placeholder="Search..." />
-
-      <Products />
     </main>
   );
 }

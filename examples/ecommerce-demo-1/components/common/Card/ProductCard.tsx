@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button, Text } from '@artimisjs/ui';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { ProductCard } from '@artimisjs/ui';
+import { Card } from '@artimisjs/ui';
 
 type CardProps = {
   className?: string;
@@ -12,25 +12,25 @@ type CardProps = {
   category: string;
 };
 
-const CustomProductCard = ({ className, src, category }: CardProps) => {
+const ProductCard = ({ className, src, category }: CardProps) => {
   const [mouseEntered, setMouseEntered] = useState(false);
 
   return (
-    <ProductCard
+    <Card
       className={`min-w-[30vw] w-[30vw] h-[58vh] bg-slate-200 rounded-3xl overflow-hidden relative hero ${className}`}
       onMouseEnter={() => setMouseEntered(true)}
       onMouseLeave={() => setMouseEntered(false)}
     >
-      <ProductCard.Header className="flex items-center justify-end w-full px-8">
+      <Card.Header className="flex items-center justify-end w-full px-8">
         <Button radius="full" size="xl">
           Checkout Now
         </Button>
         <Button radius="full" size="xl" buttonType="icon">
           <FontAwesomeIcon icon={faPlus} />
         </Button>
-      </ProductCard.Header>
+      </Card.Header>
 
-      <ProductCard.Backdrop className="h-full w-full">
+      <Card.Backdrop className="h-full w-full">
         <Image
           src={src}
           alt="hero image"
@@ -49,14 +49,14 @@ const CustomProductCard = ({ className, src, category }: CardProps) => {
         >
           Click
         </Text>
-      </ProductCard.Backdrop>
-      <ProductCard.Footer className="px-8">
+      </Card.Backdrop>
+      <Card.Footer className="px-8">
         <Button radius="full" size="xl">
           {category}
         </Button>
-      </ProductCard.Footer>
-    </ProductCard>
+      </Card.Footer>
+    </Card>
   );
 };
 
-export default CustomProductCard;
+export default ProductCard;

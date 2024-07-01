@@ -5,9 +5,19 @@ import ProductCard from './ProductCard';
 
 const Offers = () => {
   return (
-    <section className="flex gap-8">
-      <ProductCard />
-      <ProductCard />
+    <section className="flex flex-col gap-4">
+      <Text size="xxhuge">Offers For You</Text>
+
+      <div className="flex gap-4">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
+      <div className="flex gap-4">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
     </section>
   );
 };

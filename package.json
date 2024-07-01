@@ -22,7 +22,7 @@
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "storybook": "^8.1.10",
-    "turbo": "^2.0.4",
+    "turbo": "^2.0.6",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@8.15.6",

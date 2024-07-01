@@ -13,9 +13,16 @@ const nextConfig = {
         hostname: 'cdn.dribbble.com',
         port: '',
         pathname: '/**',
-      }, {
+      },
+      {
         protocol: 'https',
-        hostname: 'video-previews.elements.envatousercontent.com',
+        hostname: 'images.pexels.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.freepik.com',
         port: '',
         pathname: '/**',
       }

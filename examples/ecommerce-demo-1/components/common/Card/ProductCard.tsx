@@ -17,7 +17,7 @@ const ProductCard = ({ className, src, category }: CardProps) => {
 
   return (
     <Card
-      className={`min-w-[30vw] w-[30vw] h-[58vh] bg-slate-200 rounded-3xl overflow-hidden relative hero ${className}`}
+      className={`min-w-[30vw] w-[30vw] h-[58vh] bg-slate-200 rounded-3xl overflow-hidden relative select-none ${className}`}
       onMouseEnter={() => setMouseEntered(true)}
       onMouseLeave={() => setMouseEntered(false)}
     >

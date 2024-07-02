@@ -32,14 +32,40 @@ jobs:
       - name: Build the packages
         run: pnpm build:core && pnpm build:ui
 
-      - name: Create Version PR or Publish to NPM
-        id: changesets
-        uses: changesets/action@v1.4.7
+      - name: Run Changeset Version
+        run: npm run changeset version
+        continue-on-error: true
+
+      - name: Run Changeset Publish
+        run: npm run changeset publish
+        continue-on-error: true
+
+      - name: Set Git Config
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Create Branch for Release
+        run: |
+          git checkout -b changeset-release/main
+          git add .
+          git commit -m "chore(release): version packages"
+
+      - name: Push Changeset Release Branch
+        run: |
+          git push origin changeset-release/main
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
         with:
-          commit: 'chore(release): version packages'
+          token: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
+          branch: changeset-release/main
+          base: main
           title: 'chore(release): version packages'
-          publish: npm run changeset publish
-          version: npm run changeset version
-        env:
-          GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          body: |
+            Automated pull request for releasing versions using changeset.
+
+      - name: Cleanup
+        run: |
+          git checkout main
+          git branch -D changeset-release/main

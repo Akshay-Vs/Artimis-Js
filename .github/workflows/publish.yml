@@ -36,6 +36,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1.4.7
         with:
+          commit: 'chore(release): version packages'
+          title: 'chore(release): version packages'
           publish: npm run changeset publish
           version: npm run changeset version
         env:

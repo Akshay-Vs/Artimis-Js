@@ -2,6 +2,7 @@
   "name": "artemis-js",
   "private": true,
   "scripts": {
+    "release": "pnpm run build && changeset publish",
     "build": "turbo build",
     "dev": "turbo dev",
     "dev:ui": "pnpm --recursive --filter=@artimisjs/ui dev",

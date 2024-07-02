@@ -3,7 +3,7 @@
 'ecommerce-demo-1': patch
 '@artimisjs/core': patch
 '@artimisjs/ui': patch
-'@artimisjs/docs': patch
+'docs': patch
 ---
 
-Feature Improvements, Added new components, Fixed known bugs
+feature improvements, Added New Components, Fixed known bugs

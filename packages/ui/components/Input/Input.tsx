@@ -1,33 +1,63 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { InputHTMLAttributes } from 'react';
+import { VariantProps, cva } from 'class-variance-authority';
+import cn from '@/utils/cn';
+import { Button } from '../Button/Button';
 
-type InputHTMLAttributesWithIcon = InputHTMLAttributes<HTMLInputElement> & {
-  icon?: IconProp;
-  containerClassName?: string;
-};
+const input = cva(
+  'border-[1px] p-3 px-[5px] pl-5 h-12 rounded-full flex-center-between transition-all duration-300 gap-4 font-[500]',
+  {
+    variants: {
+      variant: {
+        primary: ['text-[#595959]', 'bg-[#fafafa]', 'border-[#e5e7eb]'],
+        secondary: ['text-[#000]', 'bg-[#fff]', 'border-[#000]'],
+        accent: ['text-white', 'bg-blue-500', 'border-blue-500'],
+      },
+      size: {
+        sm: ['text-sm', 'h-8'],
+        md: ['text-base', 'h-10'],
+        xl: ['text-base', 'h-12'],
+        xxl: ['text-base', 'h-14'],
+      },
+      radius: {
+        sm: ['rounded-sm'],
+        md: ['rounded-md'],
+        xl: ['rounded-xl'],
+        xxl: ['rounded-2xl'],
+        full: ['rounded-full'],
+      },
+    },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'xxl',
+      radius: 'full',
+    },
+  }
+);
+
+type InputHTMLAttributesWithIcon = InputHTMLAttributes<HTMLInputElement> &
+  VariantProps<typeof input> & {
+    icon?: IconProp;
+  };
 
 const Input = ({
   icon,
-  containerClassName,
+  variant,
+  size,
+  radius,
   ...rest
 }: InputHTMLAttributesWithIcon) => {
   return (
-    <div
-      className={`border-[1px] p-3 px-[5px] pl-5 h-12 rounded-full flex-center-between
-        text-[#595959] transition-all duration-300 bg-[#fafafa] gap-4 font-[500] ${containerClassName}`}
-    >
+    <div className={cn(input({ variant, size, radius }))}>
       <input
         {...rest}
         className="border-none outline-none bg-transparent w-[80%]"
       />
       {icon && (
-        <button
-          className="h-9 w-9 rounded-full bg-[#ededed] flex-center hover:invert 
-            transition-all duration-300"
-        >
+        <Button variant={variant} size={size} buttonType="icon">
           <FontAwesomeIcon icon={icon} />
-        </button>
+        </Button>
       )}
     </div>
   );

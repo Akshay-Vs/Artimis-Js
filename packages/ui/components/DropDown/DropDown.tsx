@@ -4,15 +4,16 @@ import { ReactElement, ReactNode, forwardRef, useState } from 'react';
 import Options from './Options';
 import { VariantProps, cva } from 'class-variance-authority';
 import cn from '@/utils/cn';
+import { Button } from '../Button/Button';
 
 const dropDown = cva(
-  'border-[2px] p-3 px-[5px] h-12 flex-center flex-col  transition-all duration-300 gap-4 font-[500] relative',
+  'border-[2px] p-3 px-[5px] h-12 flex-center flex-col transition-all duration-300 gap-4 font-[500] relative',
   {
     variants: {
-      varient: {
+      variant: {
         primary: ['text-[#595959]', 'bg-[#fafafa]', 'border-[#e5e7eb'],
         secondary: ['text-[#000]', 'bg-[#fff]', 'border-[#000]'],
-        accent: [],
+        accent: ['bg-blue-500', 'text-white', 'border-blue-500'],
       },
       size: {
         sm: ['text-sm', 'h-8'],
@@ -29,44 +30,51 @@ const dropDown = cva(
       },
     },
     defaultVariants: {
-      varient: 'primary',
+      variant: 'primary',
       size: 'xxl',
       radius: 'full',
     },
   }
 );
 
-interface DropDownProps extends VariantProps<typeof dropDown> {
+type DropDownProps = VariantProps<typeof dropDown> & {
   className?: string;
   title: string;
   options?: Array<string>;
   children?: ReactNode | ReactElement | undefined;
-}
+};
 
 const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
-  ({
-    className,
-    title,
-    options,
-    children,
-    radius,
-    varient,
-    size,
-  }: DropDownProps) => {
+  (
+    {
+      className,
+      title,
+      options,
+      children,
+      radius,
+      variant,
+      size,
+    }: DropDownProps,
+    ref
+  ) => {
     const [selected, setSelected] = useState(title);
     const [showOptions, setShowOptions] = useState(false);
 
     return (
-      <div className={cn(dropDown({ className, size, radius, varient }))}>
+      <div
+        ref={ref}
+        className={cn(dropDown({ className, size, radius, variant }))}
+      >
         <div className="flex-center-between pl-5 gap-4 w-full">
           {selected}
-          <button
-            className="h-9 w-9 rounded-full bg-[#ededed] flex-center hover:invert 
-            transition-all duration-300"
+          <Button
+            variant={variant}
+            size={size}
+            buttonType="icon"
             onClick={() => setShowOptions((prev) => !prev)}
           >
             <FontAwesomeIcon icon={showOptions ? faChevronUp : faChevronDown} />
-          </button>
+          </Button>
         </div>
 
         {showOptions ? (
@@ -77,7 +85,7 @@ const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
               options={options || []}
               setSelected={setSelected}
               setShowOptions={setShowOptions}
-              varient={varient}
+              varient={variant}
             />
           )
         ) : null}

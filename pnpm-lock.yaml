@@ -29,7 +29,7 @@ importers:
         version: 3.2.5
       storybook:
         specifier: ^8.1.10
-        version: 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))
+        version: 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       turbo:
         specifier: ^2.0.6
         version: 2.0.6
@@ -92,11 +92,11 @@ importers:
   examples/ecommerce-demo-1:
     dependencies:
       '@artimisjs/core':
-        specifier: ^0.2.2
-        version: 0.2.2(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        specifier: latest
+        version: 0.2.3(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@artimisjs/ui':
-        specifier: ^0.1.4
-        version: 0.1.6(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        specifier: latest
+        version: 0.1.7(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@fortawesome/fontawesome-svg-core':
         specifier: ^6.5.2
         version: 6.5.2
@@ -426,14 +426,14 @@ packages:
   '@artimisjs/core@0.2.0':
     resolution: {integrity: sha512-5OGycXPd1e6u2x/oKQ4ct1Ct/9p1r76RqG99MIqoMktNxuWDAkewH84TE/QzyJ1TMYxJrYsb8dqbRGVl90c9Kg==}
 
-  '@artimisjs/core@0.2.2':
-    resolution: {integrity: sha512-wO8mnTNlIP8qt5mCvm3RngusZStyD4Kt9LURz+NVd0hJa7YR0RuGwlesUDh3rBYfN7WWc0JjcSMIUr4RIldhwg==}
+  '@artimisjs/core@0.2.3':
+    resolution: {integrity: sha512-CLD6HJJnRqMQZwaetsdGzhfHp3Dpo/vQL+Yc4Q+Scb2kJwWGDQfoH6RavNLhMn/W+XIljYc5Pt5l/ZmNf4oTYQ==}
 
   '@artimisjs/ui@0.1.2':
     resolution: {integrity: sha512-u8vd6yN2lMAx8m2LmaTsKkiysZGpILsw1mezHPMYjFLxebWRR0sPUdHa2Mt7RQXaLVxTFkBW5oCIs3LO/fkEfw==}
 
-  '@artimisjs/ui@0.1.6':
-    resolution: {integrity: sha512-8R+8t6LK2RD+VoLtzlMPUIoxJtzPf0wvpXua7fMlrS1n6xrV08mh44t2AXUd+UHDJ8iPV+Jc2wWFJ22U0eBugw==}
+  '@artimisjs/ui@0.1.7':
+    resolution: {integrity: sha512-BJY3owhjYN/tDMCcVtSA2Fwe+BYVayyevRUX5QAeML8badxHYAusUEm/vIX1KErSdaW589YpNmQH7x7KMOCXCQ==}
 
   '@aw-web-design/x-default-browser@1.4.126':
     resolution: {integrity: sha512-Xk1sIhyNC/esHGGVjL/niHLowM0csl/kFO5uawBy4IrWwy0o1G8LGt3jP6nmWGz+USxeeqbihAmp/oVZju6wug==}
@@ -6785,7 +6785,7 @@ snapshots:
       - typescript
       - vite
 
-  '@artimisjs/core@0.2.2(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+  '@artimisjs/core@0.2.3(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -6806,14 +6806,16 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       tailwind-merge: 2.3.0
 
-  '@artimisjs/ui@0.1.6(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+  '@artimisjs/ui@0.1.7(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
-      '@artimisjs/core': 0.2.2(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      '@artimisjs/core': 0.2.3(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       class-variance-authority: 0.7.0
       clsx: 2.1.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tailwind-merge: 2.3.0
+      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      vite-tsconfig-paths: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -8939,7 +8941,7 @@ snapshots:
       telejson: 7.2.0
       tiny-invariant: 1.3.3
 
-  '@storybook/cli@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))':
+  '@storybook/cli@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/types': 7.24.7
@@ -8947,7 +8949,7 @@ snapshots:
       '@storybook/codemod': 8.1.10
       '@storybook/core-common': 8.1.10(prettier@3.2.5)
       '@storybook/core-events': 8.1.10
-      '@storybook/core-server': 8.1.10(prettier@3.2.5)
+      '@storybook/core-server': 8.1.10(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/csf-tools': 8.1.10
       '@storybook/node-logger': 8.1.10
       '@storybook/telemetry': 8.1.10(prettier@3.2.5)
@@ -9070,7 +9072,7 @@ snapshots:
       '@storybook/csf': 0.1.8
       ts-dedent: 2.2.0
 
-  '@storybook/core-server@8.1.10(prettier@3.2.5)':
+  '@storybook/core-server@8.1.10(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@aw-web-design/x-default-browser': 1.4.126
       '@babel/core': 7.24.7
@@ -13943,9 +13945,9 @@ snapshots:
 
   store2@2.14.3: {}
 
-  storybook@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7)):
+  storybook@8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@storybook/cli': 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))
+      '@storybook/cli': 8.1.10(@babel/preset-env@7.24.7(@babel/core@7.24.7))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@babel/preset-env'
       - bufferutil

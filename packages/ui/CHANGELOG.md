@@ -4,6 +4,14 @@
 
 ### Patch Changes
 
+- Feature update, bug fixes
+- Updated dependencies
+  - @artimisjs/core@0.2.3
+
+## 0.1.7
+
+### Patch Changes
+
 - Added components, Fixed known bugs
 
 ## 0.1.6

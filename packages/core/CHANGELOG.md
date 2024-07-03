@@ -1,5 +1,11 @@
 # @artimisjs/core
 
+## 0.2.3
+
+### Patch Changes
+
+- Feature update, bug fixes
+
 ## 0.2.2
 
 ### Patch Changes

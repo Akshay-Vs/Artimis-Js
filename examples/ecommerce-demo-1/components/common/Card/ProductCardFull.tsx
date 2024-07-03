@@ -34,7 +34,7 @@ const ProductCardFull = ({
           src={src}
           alt={title}
           height={720}
-          className="w-full h-full object-center object-cover"
+          className="w-full h-full object-top object-cover"
           width={720}
         />
       </div>

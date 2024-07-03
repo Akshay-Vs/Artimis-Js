@@ -12,7 +12,7 @@ const Offers = () => {
         'Elegant red evening dress that captures attention. Ideal for special occasions and formal events.',
       title: 'Elegant Red Dress',
       price: 79.99,
-      colors: ['#f87171'],
+      colors: ['#f87171', '#60a5fa', '#34d399'],
       sizes: ['s', 'm', 'l'],
     },
     {
@@ -21,7 +21,7 @@ const Offers = () => {
         'Comfortable and casual blue jeans, perfect for everyday wear. Durable and stylish for any occasion.',
       title: 'Casual Blue Jeans',
       price: 49.99,
-      colors: ['#60a5fa'],
+      colors: ['#60a5fa', '#4c6e9e', '#9e5c4c'],
       sizes: ['s', 'm', 'l', 'xl', 'xxl'],
     },
     {
@@ -30,7 +30,7 @@ const Offers = () => {
         'Cozy knit sweater in a vibrant green hue. Stay warm and fashionable during the cooler months.',
       title: 'Vibrant Green Sweater',
       price: 29.99,
-      colors: ['#34d399'],
+      colors: ['#34d399', '#7c52a4', '#3e8d5e'],
       sizes: ['s', 'm', 'l', 'xl'],
     },
     {
@@ -39,7 +39,7 @@ const Offers = () => {
         'Classic black leather jacket, a must-have in any wardrobe. Perfect for adding an edge to your look.',
       title: 'Classic Leather Jacket',
       price: 99.99,
-      colors: ['#000000'],
+      colors: ['#000000', '#34d399', '#e54854', '#2f6ea6'],
       sizes: ['s', 'm', 'l', 'xl'],
     },
     {
@@ -48,7 +48,7 @@ const Offers = () => {
         'Elegant white blouse, suitable for both office and casual wear. Comfortable and chic.',
       title: 'Elegant White Blouse',
       price: 34.99,
-      colors: ['#ffffff'],
+      colors: ['#fa90fc', '#e54854', '#2f6ea6'],
       sizes: ['s', 'm', 'l'],
     },
     {
@@ -57,7 +57,7 @@ const Offers = () => {
         'Stylish and versatile grey hoodie, perfect for layering and everyday wear.',
       title: 'Versatile Grey Hoodie',
       price: 39.99,
-      colors: ['#9ca3af'],
+      colors: ['#9ca3af', '#4ca09e', '#9e4c67'],
       sizes: ['s', 'm', 'l', 'xl', 'xxl'],
     },
   ];

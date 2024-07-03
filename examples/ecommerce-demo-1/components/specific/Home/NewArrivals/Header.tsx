@@ -16,7 +16,7 @@ const NewArrivalsHeader = ({ handleScroll }: NewArrivalsHeaderProps) => {
   return (
     <div className="flex-center-between">
       <Text size="xxhuge">New Arrivals</Text>
-      <div className="flex-center gap-4">
+      <div className="hidden md:flex-center gap-4">
         <Button buttonType="icon" onClick={() => handleScroll(-scrollRate)}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </Button>

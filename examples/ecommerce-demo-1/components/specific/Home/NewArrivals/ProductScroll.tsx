@@ -35,14 +35,14 @@ const ProductScroll = ({ scrollRef }: ProductScrollProps) => {
 
   return (
     <div
-      className="flex gap-4 overflow-x-scroll whitespace-nowrap"
+      className="flex flex-col justify-center items-center md:items-start md:justify-start md:flex-row gap-4 overflow-x-scroll whitespace-nowrap"
       ref={scrollRef}
     >
       {products.map((product, index) => {
         return (
           <ProductCard
             key={index}
-            className={`${index === 0 ? 'min-w-[50vw] max-w-[50vw]' : ''} cursor-pointer`}
+            className={`${index === 0 ? 'min-w-full md:min-w-[50vw] md:max-w-[50vw]' : ''} cursor-pointer`}
             category={product.category}
             src={product.src}
           />

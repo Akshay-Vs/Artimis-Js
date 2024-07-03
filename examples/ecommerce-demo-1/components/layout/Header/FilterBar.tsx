@@ -24,7 +24,7 @@ const FilterBar = () => {
     },
   ];
   return (
-    <div className="flex-center-start gap-8">
+    <div className="hidden md:flex-center-start gap-8">
       <DropDown
         className="w-[18vw]"
         options={['Hello World', 'Hello World']}

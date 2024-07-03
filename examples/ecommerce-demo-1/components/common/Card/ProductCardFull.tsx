@@ -1,4 +1,3 @@
-'use client';
 import { Button, Card, Text } from '@artimisjs/ui';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -54,7 +53,7 @@ const ProductCardFull = ({
               Sizes:
             </Text>
             <Text className="font-[500]" size="md">
-              <>{sizes.join(' / ').toUpperCase}</>
+              {sizes.join(' / ').toLocaleUpperCase()}
             </Text>
           </div>
           <div className="mr-10">
@@ -64,6 +63,7 @@ const ProductCardFull = ({
             <div className="flex-center">
               {colors.map((color) => (
                 <div
+                  key={color}
                   className="h-4 w-4 rounded-full"
                   style={{ backgroundColor: color }}
                 />

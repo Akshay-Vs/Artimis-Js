@@ -35,4 +35,4 @@ const Circle = forwardRef<HTMLDivElement, CircleProps>(
   }
 );
 
-export default Circle;
+export { Circle };

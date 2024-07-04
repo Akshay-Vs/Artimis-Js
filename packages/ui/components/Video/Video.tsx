@@ -1,5 +1,5 @@
 // TODO: Add cva variants
-import React, { HTMLProps } from 'react';
+import { HTMLProps } from 'react';
 
 type VideoProps = HTMLProps<HTMLVideoElement> & {};
 
@@ -20,4 +20,4 @@ const Video = ({ src }: VideoProps) => {
   );
 };
 
-export default Video;
+export { Video };

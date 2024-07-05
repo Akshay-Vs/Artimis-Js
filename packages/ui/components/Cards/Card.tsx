@@ -41,29 +41,29 @@ const card = cva('bg-slate-200 overflow-hidden relative', {
 //#region Types
 
 type CommonProps = PropsWithChildren & HTMLProps<HTMLDivElement>;
-type CardType = VariantProps<typeof card> & CommonProps;
-type HeaderType = CommonProps;
-type BackdropType = CommonProps;
-type FooterType = CommonProps;
+type CardProps = VariantProps<typeof card> & CommonProps;
+type HeaderProps = CommonProps;
+type BackdropProps = CommonProps;
+type FooterProps = CommonProps;
 
 interface CardComponent
   extends React.ForwardRefExoticComponent<
-    CardType & React.RefAttributes<HTMLDivElement>
+    CardProps & React.RefAttributes<HTMLDivElement>
   > {
   Header: React.ForwardRefExoticComponent<
-    HeaderType & React.RefAttributes<HTMLDivElement>
+    HeaderProps & React.RefAttributes<HTMLDivElement>
   >;
   Backdrop: React.ForwardRefExoticComponent<
-    BackdropType & React.RefAttributes<HTMLDivElement>
+    BackdropProps & React.RefAttributes<HTMLDivElement>
   >;
   Footer: React.ForwardRefExoticComponent<
-    FooterType & React.RefAttributes<HTMLDivElement>
+    FooterProps & React.RefAttributes<HTMLDivElement>
   >;
 }
 
 //#endregion
 
-const Card = forwardRef<HTMLDivElement, CardType>(
+const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ children, radius, height, width, className, ...rest }, ref) => {
     return (
       <div
@@ -77,7 +77,7 @@ const Card = forwardRef<HTMLDivElement, CardType>(
   }
 ) as CardComponent;
 
-const Header = forwardRef<HTMLDivElement, HeaderType>(
+const Header = forwardRef<HTMLDivElement, HeaderProps>(
   ({ children, className, ...rest }, ref) => {
     return (
       <div
@@ -91,7 +91,7 @@ const Header = forwardRef<HTMLDivElement, HeaderType>(
   }
 );
 
-const Backdrop = forwardRef<HTMLDivElement, BackdropType>(
+const Backdrop = forwardRef<HTMLDivElement, BackdropProps>(
   ({ children, className, ...rest }, ref) => {
     return (
       <div
@@ -105,7 +105,7 @@ const Backdrop = forwardRef<HTMLDivElement, BackdropType>(
   }
 );
 
-const Footer = forwardRef<HTMLDivElement, FooterType>(
+const Footer = forwardRef<HTMLDivElement, FooterProps>(
   ({ children, className, ...rest }, ref) => {
     return (
       <div
@@ -128,4 +128,4 @@ Card.Header.displayName = 'CardHeader';
 Card.Footer.displayName = 'CardFooter';
 
 export { Card };
-export type { CardType, HeaderType, BackdropType, FooterType };
+export type { CardProps, HeaderProps, BackdropProps, FooterProps };

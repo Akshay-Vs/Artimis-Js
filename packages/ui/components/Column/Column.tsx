@@ -37,4 +37,5 @@ const Column = forwardRef<HTMLDivElement, ColumnProps>(
 
 Column.displayName = 'Column';
 
-export default Column;
+export { Column };
+export type { ColumnProps };

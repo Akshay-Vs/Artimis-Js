@@ -9,9 +9,12 @@
     "lint": "next lint",
     "prepare": "husky"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
-    "@artimisjs/core": "^0.2.3",
-    "@artimisjs/ui": "^0.1.8",
+    "@artimisjs/core": "workspace:*",
+    "@artimisjs/ui": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

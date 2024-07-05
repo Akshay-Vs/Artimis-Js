@@ -63,7 +63,7 @@ const ProductCardFull = ({
             </Text>
             <Row align="center">
               {colors.map((color) => (
-                <Circle color={color} />
+                <Circle key={color} color={color} />
               ))}
             </Row>
           </Column>

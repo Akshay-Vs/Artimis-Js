@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@artimisjs/core": "^0.2.3",
-    "@artimisjs/ui": "^0.1.7",
+    "@artimisjs/ui": "^0.1.8",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

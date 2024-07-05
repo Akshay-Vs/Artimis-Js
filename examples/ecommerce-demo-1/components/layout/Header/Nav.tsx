@@ -1,6 +1,6 @@
 import { Hamburger } from '@/components/common';
 import { colors } from '@/shared/config/colors';
-import { Button, Text } from '@artimisjs/ui';
+import { Button, Row, Text } from '@artimisjs/ui';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
@@ -14,11 +14,11 @@ const Nav = () => {
         Vita.Chic
       </Text>
 
-      <div className="flex-center gap-8">
+      <Row className="flex-center gap-8">
         <Button buttonType="icon">
           <FontAwesomeIcon icon={faShoppingBag} />
         </Button>
-      </div>
+      </Row>
     </nav>
   );
 };

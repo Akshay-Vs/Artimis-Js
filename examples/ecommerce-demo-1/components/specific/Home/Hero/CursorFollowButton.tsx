@@ -1,12 +1,12 @@
 'use client';
-import { Text } from '@artimisjs/ui';
+import { Column, Text } from '@artimisjs/ui';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import React, { useRef, useEffect } from 'react';
 
 const CursorFollowButton = ({ href }: { href: string }) => {
-  const buttonRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<typeof Column & HTMLDivElement>(null);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -35,7 +35,7 @@ const CursorFollowButton = ({ href }: { href: string }) => {
   }, []);
 
   return (
-    <div
+    <Column
       ref={buttonRef}
       className="h-44 w-44 bg-[#ffffff7c] backdrop-blur-[8px] rounded-full absolute z-[8] cursor-pointer select-none"
     >
@@ -49,7 +49,7 @@ const CursorFollowButton = ({ href }: { href: string }) => {
           Shop Now
         </Text>
       </Link>
-    </div>
+    </Column>
   );
 };
 

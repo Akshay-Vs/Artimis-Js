@@ -1,4 +1,5 @@
 import { ProductCard } from '@/components/common';
+import { Column } from '@artimisjs/ui';
 import React from 'react';
 
 type ProductScrollProps = {
@@ -34,7 +35,7 @@ const ProductScroll = ({ scrollRef }: ProductScrollProps) => {
   ];
 
   return (
-    <div
+    <Column
       className="flex flex-col justify-center items-center md:items-start md:justify-start md:flex-row gap-4 overflow-x-scroll whitespace-nowrap"
       ref={scrollRef}
     >
@@ -48,7 +49,7 @@ const ProductScroll = ({ scrollRef }: ProductScrollProps) => {
           />
         );
       })}
-    </div>
+    </Column>
   );
 };
 

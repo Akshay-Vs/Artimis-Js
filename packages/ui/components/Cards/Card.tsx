@@ -1,6 +1,6 @@
 import { VariantProps, cva } from 'class-variance-authority';
 import cn from '@/utils/cn';
-import { HTMLProps, PropsWithChildren } from 'react';
+import { HTMLProps, PropsWithChildren, forwardRef } from 'react';
 
 //#region CVA Properties
 
@@ -46,49 +46,86 @@ type HeaderType = CommonProps;
 type BackdropType = CommonProps;
 type FooterType = CommonProps;
 
+interface CardComponent
+  extends React.ForwardRefExoticComponent<
+    CardType & React.RefAttributes<HTMLDivElement>
+  > {
+  Header: React.ForwardRefExoticComponent<
+    HeaderType & React.RefAttributes<HTMLDivElement>
+  >;
+  Backdrop: React.ForwardRefExoticComponent<
+    BackdropType & React.RefAttributes<HTMLDivElement>
+  >;
+  Footer: React.ForwardRefExoticComponent<
+    FooterType & React.RefAttributes<HTMLDivElement>
+  >;
+}
+
 //#endregion
 
-const Card = ({
-  children,
-  radius,
-  height,
-  width,
-  className,
-  ...rest
-}: CardType) => {
-  return (
-    <div className={cn(card({ radius, height, width }), className)} {...rest}>
-      {children}
-    </div>
-  );
-};
+const Card = forwardRef<HTMLDivElement, CardType>(
+  ({ children, radius, height, width, className, ...rest }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn(card({ radius, height, width }), className)}
+        {...rest}
+      >
+        {children}
+      </div>
+    );
+  }
+) as CardComponent;
 
-const Header = ({ children, className, ...rest }: HeaderType) => {
-  return (
-    <div className={cn(['z-10 absolute top-8', className])} {...rest}>
-      {children}
-    </div>
-  );
-};
+const Header = forwardRef<HTMLDivElement, HeaderType>(
+  ({ children, className, ...rest }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn(['z-10 absolute top-8', className])}
+        {...rest}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 
-const Backdrop = ({ children, className, ...rest }: BackdropType) => {
-  return (
-    <div className={cn('absolute top-0 z-[5]', className)} {...rest}>
-      {children}
-    </div>
-  );
-};
+const Backdrop = forwardRef<HTMLDivElement, BackdropType>(
+  ({ children, className, ...rest }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn('absolute top-0 z-[5]', className)}
+        {...rest}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 
-const Footer = ({ children, className, ...rest }: FooterType) => {
-  return (
-    <div className={cn('bottom-8 z-10 absolute', className)} {...rest}>
-      {children}
-    </div>
-  );
-};
+const Footer = forwardRef<HTMLDivElement, FooterType>(
+  ({ children, className, ...rest }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn('bottom-8 z-10 absolute', className)}
+        {...rest}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 
 Card.Header = Header;
 Card.Backdrop = Backdrop;
 Card.Footer = Footer;
 
+Card.displayName = 'Card';
+Card.Header.displayName = 'CardHeader';
+Card.Footer.displayName = 'CardFooter';
+
 export { Card };
+export type { CardType, HeaderType, BackdropType, FooterType };

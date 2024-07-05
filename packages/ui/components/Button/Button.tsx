@@ -64,15 +64,20 @@ const button = cva('transition-all duration-300 w-fit', {
   },
 });
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof button> & {};
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, buttonType, radius, ...props }, ref) => (
     <button
       ref={ref}
-      className={cn(button({ variant, size, buttonType, className, radius }))}
+      className={cn(button({ variant, size, buttonType, radius }), className)}
       {...props}
     />
   )
 );
+
+Button.displayName = 'Button';
+
+export { Button };
+export type { ButtonProps };

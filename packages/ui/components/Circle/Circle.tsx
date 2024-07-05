@@ -23,10 +23,10 @@ type CircleProps = HTMLProps<HTMLDivElement> &
   };
 
 const Circle = forwardRef<HTMLDivElement, CircleProps>(
-  ({ color, size, className, ref, ...rest }: CircleProps) => {
+  ({ color, size, className, ...rest }: CircleProps, ref) => {
     return (
       <div
-        className={cn(size, className)}
+        className={cn(circle({ size }), className)}
         style={{ backgroundColor: color }}
         ref={ref}
         {...rest}
@@ -35,4 +35,7 @@ const Circle = forwardRef<HTMLDivElement, CircleProps>(
   }
 );
 
+Circle.displayName = 'Circle';
+
 export { Circle };
+export type { CircleProps };

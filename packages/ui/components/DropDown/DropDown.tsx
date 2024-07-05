@@ -94,4 +94,7 @@ const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
   }
 );
 
+DropDown.displayName = 'DropDown';
+
 export { DropDown };
+export type { DropDownProps };

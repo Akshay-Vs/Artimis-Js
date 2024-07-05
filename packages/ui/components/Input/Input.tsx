@@ -1,6 +1,6 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes, forwardRef } from 'react';
 import { VariantProps, cva } from 'class-variance-authority';
 import cn from '@/utils/cn';
 import { Button } from '../Button/Button';
@@ -36,31 +36,30 @@ const input = cva(
   }
 );
 
-type InputHTMLAttributesWithIcon = InputHTMLAttributes<HTMLInputElement> &
+type InputProps = InputHTMLAttributes<HTMLInputElement> &
   VariantProps<typeof input> & {
     icon?: IconProp;
   };
 
-const Input = ({
-  icon,
-  variant,
-  size,
-  radius,
-  ...rest
-}: InputHTMLAttributesWithIcon) => {
-  return (
-    <div className={cn(input({ variant, size, radius }))}>
-      <input
-        {...rest}
-        className="border-none outline-none bg-transparent w-[80%]"
-      />
-      {icon && (
-        <Button variant={variant} size={size} buttonType="icon">
-          <FontAwesomeIcon icon={icon} />
-        </Button>
-      )}
-    </div>
-  );
-};
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ icon, variant, size, radius, ...rest }: InputProps) => {
+    return (
+      <div className={cn(input({ variant, size, radius }))}>
+        <input
+          {...rest}
+          className="border-none outline-none bg-transparent w-[80%]"
+        />
+        {icon && (
+          <Button variant={variant} size={size} buttonType="icon">
+            <FontAwesomeIcon icon={icon} />
+          </Button>
+        )}
+      </div>
+    );
+  }
+);
 
-export default Input;
+Input.displayName = 'Input';
+
+export { Input };
+export type { InputProps };

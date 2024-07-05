@@ -1,6 +1,5 @@
 import { DropDown } from '@/components/DropDown/DropDown';
-import { Button } from '../components';
-import Input from '@/components/Input/Input';
+import { Button, Input } from '../components';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {

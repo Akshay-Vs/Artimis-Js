@@ -4,7 +4,7 @@ import React from 'react';
 
 const Promo = () => {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex-center flex-col gap-4 h-screen">
       <Card
         height="lg"
         width="full"

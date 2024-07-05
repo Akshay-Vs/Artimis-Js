@@ -1,6 +1,6 @@
 import { ProductCardFull } from '@/components/common';
-import { Card, Text } from '@artimisjs/ui';
-import Image from 'next/image';
+import { Text } from '@artimisjs/ui';
+import Link from 'next/link';
 import { title } from 'process';
 import React from 'react';
 
@@ -67,15 +67,16 @@ const Offers = () => {
       <Text size="xxhuge">Offers For You</Text>
       <div className="grid md:grid-cols-3 sm:grid-cols-1 lsm:grid-cols-2 gap-4">
         {offers.map((offer) => (
-          <ProductCardFull
-            key={title}
-            src={offer.src}
-            description={offer.description}
-            title={offer.title}
-            price={offer.price}
-            colors={offer.colors}
-            sizes={offer.sizes}
-          />
+          <Link key={title} href={'/title'} className="rounded-3xl">
+            <ProductCardFull
+              src={offer.src}
+              description={offer.description}
+              title={offer.title}
+              price={offer.price}
+              colors={offer.colors}
+              sizes={offer.sizes}
+            />
+          </Link>
         ))}
       </div>
     </section>

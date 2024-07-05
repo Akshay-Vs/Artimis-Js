@@ -1,5 +1,11 @@
 # @artimisjs/ui
 
+## 0.1.8
+
+### Patch Changes
+
+- added new components, code refactor, fixed known bugs
+
 ## 0.1.7
 
 ### Patch Changes

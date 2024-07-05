@@ -1,4 +1,10 @@
-import { Promo, Hero, NewArrivals, Offers } from '@/components/specific';
+import {
+  Promo,
+  Hero,
+  NewArrivals,
+  Offers,
+  Categories,
+} from '@/components/specific';
 
 export default function Home() {
   return (
@@ -7,6 +13,7 @@ export default function Home() {
       <NewArrivals />
       <Promo />
       <Offers />
+      <Categories />
     </main>
   );
 }

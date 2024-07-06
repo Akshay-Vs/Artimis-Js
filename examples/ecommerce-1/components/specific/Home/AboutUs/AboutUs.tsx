@@ -45,17 +45,17 @@ const AboutUs = () => {
           </Text>
           <h2 className="text-[1.4rem] flex-1 mt-6 font-[500] text-[#414141]">
             At Vita.Chic, we believe that fashion is more than just clothing
-            it's a way of life. Founded by a team of passionate fashion
+            it&apos;s a way of life. Founded by a team of passionate fashion
             enthusiasts, our brand is dedicated to bringing you the latest
             trends, timeless styles, and unparalleled quality. Our journey began
             with a simple idea: to create a fashion destination that empowers
             individuals to express their unique style and confidence.
           </h2>
           <h2 className="text-[1.4rem] flex-1 mt-6 font-[500] text-[#414141]">
-            Fashion is more than what you wear it's about how it makes you feel.
-            At Vita.Chic, we celebrate individuality, confidence, and the joy of
-            dressing well. Join our community of fashion-forward individuals who
-            are making a statement with their style.
+            Fashion is more than what you wear it&apos;s about how it makes you
+            feel. At Vita.Chic, we celebrate individuality, confidence, and the
+            joy of dressing well. Join our community of fashion-forward
+            individuals who are making a statement with their style.
           </h2>
         </Card>
       </Row>

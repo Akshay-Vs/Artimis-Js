@@ -1,4 +1,3 @@
-import { colors } from '@config/colors';
 import React from 'react';
 
 const Hamburger = () => {

@@ -89,50 +89,7 @@ importers:
         specifier: ^5
         version: 5.3.3
 
-  examples/artimis-demo-2:
-    dependencies:
-      '@artimisjs/core':
-        specifier: latest
-        version: 0.2.3(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
-      '@artimisjs/ui':
-        specifier: latest
-        version: 0.1.8(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
-      next:
-        specifier: 14.2.4
-        version: 14.2.4(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
-      react:
-        specifier: ^18
-        version: 18.3.1
-      react-dom:
-        specifier: ^18
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@types/node':
-        specifier: ^20
-        version: 20.11.24
-      '@types/react':
-        specifier: ^18
-        version: 18.3.3
-      '@types/react-dom':
-        specifier: ^18
-        version: 18.3.0
-      eslint:
-        specifier: ^8
-        version: 8.57.0
-      eslint-config-next:
-        specifier: 14.2.4
-        version: 14.2.4(eslint@8.57.0)(typescript@5.5.2)
-      postcss:
-        specifier: ^8
-        version: 8.4.38
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.4
-      typescript:
-        specifier: ^5
-        version: 5.5.2
-
-  examples/ecommerce-demo-1:
+  examples/ecommerce-1:
     dependencies:
       '@artimisjs/core':
         specifier: latest

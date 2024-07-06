@@ -2,9 +2,9 @@
 import { Header } from '@/components/layout';
 import SmoothScroll from '@/components/layout/SmoothScroll/SmoothScroll';
 import { ArtimisCore } from '@artimisjs/core';
-import React, { JSXElementConstructor, ReactElement, ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 
-const Artimis = ({ children }: any) => {
+const Artimis = ({ children }: PropsWithChildren) => {
   return (
     <ArtimisCore dataProvider={{}} styleProvider={{}}>
       <SmoothScroll>

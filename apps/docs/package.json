@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@artimisjs/ui": "latest",
-    "@artimisjs/core": "latest",
+    "@artimisjs/ui": "workspace:*",
+    "@artimisjs/core": "workspace:*",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",

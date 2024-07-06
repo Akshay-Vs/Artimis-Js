@@ -2,7 +2,7 @@
 module.exports = {
   root: true,
   extends: [
-    "@artimis/eslint-config/library.js"
+    "@artimisjs/eslint-config/library.js"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {

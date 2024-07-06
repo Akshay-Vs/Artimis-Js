@@ -6,7 +6,7 @@ import {
   NewArrivals,
   Offers,
   Categories,
-  Exclusive,
+  AboutUs,
 } from '@/components/specific';
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <Promo />
       <Offers />
       <Categories />
-      <Exclusive />
+      <AboutUs />
     </main>
   );
 }

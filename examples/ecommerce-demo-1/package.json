@@ -13,8 +13,8 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@artimisjs/core": "workspace:*",
-    "@artimisjs/ui": "workspace:*",
+    "@artimisjs/core": "latest",
+    "@artimisjs/ui": "latest",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

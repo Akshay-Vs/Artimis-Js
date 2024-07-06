@@ -1,6 +1,6 @@
 {
-  "name": "docs",
-  "version": "0.1.2",
+  "name": "artimis-demo-2",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,24 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@artimisjs/ui": "latest",
     "@artimisjs/core": "latest",
-    "next": "14.2.4",
+    "@artimisjs/ui": "latest",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.77.6"
+    "next": "14.2.4"
   },
   "devDependencies": {
-    "@artimisjs/eslint-config": "workspace:*",
-    "@artimisjs/typescript-config": "workspace:*",
+    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  },
-  "packageManager": "pnpm@9.4.0"
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4"
+  }
 }

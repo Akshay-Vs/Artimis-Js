@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Promo,
   Hero,

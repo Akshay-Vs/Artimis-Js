@@ -1,4 +1,4 @@
-import { Button, Card, Text } from '@artimisjs/ui';
+import { Button, Card, Circle, Column, Row, Text } from '@artimisjs/ui';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
@@ -28,7 +28,7 @@ const ProductCardFull = ({
       radius="xxxl"
       className="bg-[#fcfcfc] border-[1px] flex flex-col gap-4 p-3 cursor-pointer transition-all duration-300 hover:border-[#6c6c6c]"
     >
-      <div className="h-[44vh] w-full rounded-3xl overflow-hidden">
+      <Column className="h-[44vh] w-full rounded-3xl overflow-hidden">
         <Image
           src={src}
           alt={title}
@@ -36,43 +36,40 @@ const ProductCardFull = ({
           className="w-full h-full object-top object-cover"
           width={720}
         />
-      </div>
-      <div className="flex flex-col gap-4 h-[40%] px-2">
-        <div className="flex flex-col gap-2">
+      </Column>
+      <Column className="gap-4 h-[40%] px-2">
+        <Column className="gap-2">
           <Text size="xl" className="font-[600] text-[#404040]">
             {title.toUpperCase()}
           </Text>
           <Text className="font-[400] text-[#717171]" size="md">
             {description}
           </Text>
-        </div>
+        </Column>
 
-        <div className="flex-center-between w-full">
-          <div className="opacity-60">
+        <Row className="flex-center-between w-full">
+          <Column className="opacity-60">
             <Text className="font-[500]" size="xs">
               Sizes:
             </Text>
             <Text className="font-[500]" size="md">
               {sizes.join(' / ').toLocaleUpperCase()}
             </Text>
-          </div>
-          <div className="mr-10">
+          </Column>
+
+          <Column className="mr-10">
             <Text className="font-[500] opacity-60" size="xs">
               Colors:
             </Text>
-            <div className="flex-center">
+            <Row align="center">
               {colors.map((color) => (
-                <div
-                  key={color}
-                  className="h-4 w-4 rounded-full"
-                  style={{ backgroundColor: color }}
-                />
+                <Circle key={color} color={color} />
               ))}
-            </div>
-          </div>
-        </div>
+            </Row>
+          </Column>
+        </Row>
 
-        <div className="flex-center-between">
+        <Row className="flex-center-between">
           <Text size="xl" className="font-[600] text-[#404040]">
             Price: ${price}
           </Text>
@@ -84,8 +81,8 @@ const ProductCardFull = ({
               </span>
             </Button>
           </Text>
-        </div>
-      </div>
+        </Row>
+      </Column>
     </Card>
   );
 };

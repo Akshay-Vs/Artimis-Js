@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@artimisjs/ui';
+import { Button, Column, Row } from '@artimisjs/ui';
 import React, { ReactNode, useState } from 'react';
 import './Hero.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -42,13 +42,14 @@ const Hero = () => {
   };
 
   return (
-    <div
+    <Column
       className="w-full h-[80vh] rounded-3xl overflow-hidden relative hero"
       onMouseEnter={() => setShowCursorFollow(true)}
       onMouseLeave={() => setShowCursorFollow(false)}
     >
-      <div
-        className="flex-center gap-4 absolute top-20 right-0 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white"
+      <Row
+        align="center"
+        className="gap-4 absolute top-20 right-0 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white"
         onMouseEnter={() => setShowCursorFollow(false)}
         onMouseLeave={() => setShowCursorFollow(true)}
       >
@@ -66,14 +67,14 @@ const Hero = () => {
         >
           <FontAwesomeIcon icon={faChevronRight} />
         </Button>
-      </div>
+      </Row>
 
       {showCursorFollow && (
         <CursorFollowButton href={carousels[currentCarousel].href} />
       )}
 
       {carousels[currentCarousel].node}
-    </div>
+    </Column>
   );
 };
 

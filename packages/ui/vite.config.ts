@@ -7,13 +7,11 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), dts({ rollupTypes: true })],
   build: {
-    // output entry settings
     lib: {
       entry: resolve(__dirname, 'components/index.ts'),
       name: 'artimis-ui',
       fileName: 'artimis-ui',
     },
-    // bundler optiona
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       output: {

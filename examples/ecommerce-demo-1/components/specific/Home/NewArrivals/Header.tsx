@@ -1,4 +1,4 @@
-import { Button, Text } from '@artimisjs/ui';
+import { Button, Row, Text } from '@artimisjs/ui';
 import {
   faChevronLeft,
   faChevronRight,
@@ -14,9 +14,9 @@ const NewArrivalsHeader = ({ handleScroll }: NewArrivalsHeaderProps) => {
   const scrollRate = 1000;
 
   return (
-    <div className="flex-center-between">
+    <Row className="flex-center-between">
       <Text size="xxhuge">New Arrivals</Text>
-      <div className="hidden md:flex-center gap-4">
+      <Row className="hidden md:flex-center gap-4">
         <Button buttonType="icon" onClick={() => handleScroll(-scrollRate)}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </Button>
@@ -27,8 +27,8 @@ const NewArrivalsHeader = ({ handleScroll }: NewArrivalsHeaderProps) => {
         <Button radius="full" size="xl">
           View All
         </Button>
-      </div>
-    </div>
+      </Row>
+    </Row>
   );
 };
 

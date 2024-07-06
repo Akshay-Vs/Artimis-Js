@@ -41,10 +41,10 @@ importers:
     dependencies:
       '@artimisjs/core':
         specifier: latest
-        version: 0.2.0(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        version: 0.2.3(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@artimisjs/ui':
         specifier: latest
-        version: 0.1.2
+        version: 0.1.8(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       next:
         specifier: 14.2.4
         version: 14.2.4(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
@@ -89,14 +89,57 @@ importers:
         specifier: ^5
         version: 5.3.3
 
+  examples/artimis-demo-2:
+    dependencies:
+      '@artimisjs/core':
+        specifier: latest
+        version: 0.2.3(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      '@artimisjs/ui':
+        specifier: latest
+        version: 0.1.8(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      next:
+        specifier: 14.2.4
+        version: 14.2.4(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
+      react:
+        specifier: ^18
+        version: 18.3.1
+      react-dom:
+        specifier: ^18
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.11.24
+      '@types/react':
+        specifier: ^18
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.3.0
+      eslint:
+        specifier: ^8
+        version: 8.57.0
+      eslint-config-next:
+        specifier: 14.2.4
+        version: 14.2.4(eslint@8.57.0)(typescript@5.5.2)
+      postcss:
+        specifier: ^8
+        version: 8.4.38
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.4
+      typescript:
+        specifier: ^5
+        version: 5.5.2
+
   examples/ecommerce-demo-1:
     dependencies:
       '@artimisjs/core':
-        specifier: ^0.2.3
+        specifier: latest
         version: 0.2.3(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@artimisjs/ui':
-        specifier: ^0.1.7
-        version: 0.1.7(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        specifier: latest
+        version: 0.1.8(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@fortawesome/fontawesome-svg-core':
         specifier: ^6.5.2
         version: 6.5.2
@@ -429,17 +472,11 @@ packages:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
 
-  '@artimisjs/core@0.2.0':
-    resolution: {integrity: sha512-5OGycXPd1e6u2x/oKQ4ct1Ct/9p1r76RqG99MIqoMktNxuWDAkewH84TE/QzyJ1TMYxJrYsb8dqbRGVl90c9Kg==}
-
   '@artimisjs/core@0.2.3':
     resolution: {integrity: sha512-CLD6HJJnRqMQZwaetsdGzhfHp3Dpo/vQL+Yc4Q+Scb2kJwWGDQfoH6RavNLhMn/W+XIljYc5Pt5l/ZmNf4oTYQ==}
 
-  '@artimisjs/ui@0.1.2':
-    resolution: {integrity: sha512-u8vd6yN2lMAx8m2LmaTsKkiysZGpILsw1mezHPMYjFLxebWRR0sPUdHa2Mt7RQXaLVxTFkBW5oCIs3LO/fkEfw==}
-
-  '@artimisjs/ui@0.1.7':
-    resolution: {integrity: sha512-BJY3owhjYN/tDMCcVtSA2Fwe+BYVayyevRUX5QAeML8badxHYAusUEm/vIX1KErSdaW589YpNmQH7x7KMOCXCQ==}
+  '@artimisjs/ui@0.1.8':
+    resolution: {integrity: sha512-1L4D0ZpvQ795Zz3IRV3HPTmFBVLNq1/hAyYNDnxg+Ehj3pIC1SKjc0DMpmBeXjewNT+y9Xap21glsDcQWvtlBg==}
 
   '@aw-web-design/x-default-browser@1.4.126':
     resolution: {integrity: sha512-Xk1sIhyNC/esHGGVjL/niHLowM0csl/kFO5uawBy4IrWwy0o1G8LGt3jP6nmWGz+USxeeqbihAmp/oVZju6wug==}
@@ -3161,9 +3198,6 @@ packages:
   camelcase@5.3.1:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
-
-  caniuse-lite@1.0.30001593:
-    resolution: {integrity: sha512-UWM1zlo3cZfkpBysd7AS+z+v007q9G1+fLTUU42rQnY6t2axoogPW/xol6T7juU5EUoOhML4WgBIdG+9yYqAjQ==}
 
   caniuse-lite@1.0.30001636:
     resolution: {integrity: sha512-bMg2vmr8XBsbL6Lr0UHXy/21m84FTxDLWn2FSqMd5PrlbMxwJlQnC2YWYxVgp66PZE+BBNF2jYQUBKCo1FDeZg==}
@@ -6826,7 +6860,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.20
 
-  '@artimisjs/core@0.2.0(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+  '@artimisjs/core@0.2.3(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -6852,17 +6886,29 @@ snapshots:
       - typescript
       - vite
 
-  '@artimisjs/ui@0.1.2':
+  '@artimisjs/ui@0.1.8(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
+      '@artimisjs/core': 0.2.3(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      '@studio-freight/react-lenis': 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       class-variance-authority: 0.7.0
       clsx: 2.1.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tailwind-merge: 2.3.0
+      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      vite-tsconfig-paths: 4.3.2(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+    transitivePeerDependencies:
+      - '@types/node'
+      - immer
+      - rollup
+      - supports-color
+      - typescript
+      - vite
 
-  '@artimisjs/ui@0.1.7(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+  '@artimisjs/ui@0.1.8(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
       '@artimisjs/core': 0.2.3(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      '@studio-freight/react-lenis': 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       class-variance-authority: 0.7.0
       clsx: 2.1.1
       react: 18.3.1
@@ -6872,6 +6918,7 @@ snapshots:
       vite-tsconfig-paths: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
     transitivePeerDependencies:
       - '@types/node'
+      - immer
       - rollup
       - supports-color
       - typescript
@@ -8539,7 +8586,7 @@ snapshots:
       fast-glob: 3.3.1
       is-glob: 4.0.3
       open: 9.1.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       tslib: 2.6.2
 
   '@radix-ui/primitive@1.1.0': {}
@@ -10537,7 +10584,7 @@ snapshots:
 
   browserslist@4.22.1:
     dependencies:
-      caniuse-lite: 1.0.30001593
+      caniuse-lite: 1.0.30001636
       electron-to-chromium: 1.4.583
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
@@ -10595,8 +10642,6 @@ snapshots:
       quick-lru: 4.0.1
 
   camelcase@5.3.1: {}
-
-  caniuse-lite@1.0.30001593: {}
 
   caniuse-lite@1.0.30001636: {}
 
@@ -14574,7 +14619,7 @@ snapshots:
     dependencies:
       browserslist: 4.22.1
       escalade: 3.1.1
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   update-browserslist-db@1.0.16(browserslist@4.23.1):
     dependencies:

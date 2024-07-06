@@ -1,5 +1,5 @@
 import { Input } from '@/components/common';
-import { Button, DropDown } from '@artimisjs/ui';
+import { Button, DropDown, Row } from '@artimisjs/ui';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import React from 'react';
@@ -24,7 +24,7 @@ const FilterBar = () => {
     },
   ];
   return (
-    <div className="hidden md:flex-center-start gap-8">
+    <Row className="hidden md:flex-center-start gap-8">
       <DropDown
         className="w-[18vw]"
         options={['Hello World', 'Hello World']}
@@ -44,7 +44,7 @@ const FilterBar = () => {
         icon={faSearch}
       />
 
-      <div className="flex-center-between gap-4">
+      <Row className="flex-center-between gap-4">
         {buttons.map((button) => (
           <Link href={button.target} key={button.text}>
             <Button size="xl" radius="full">
@@ -52,8 +52,8 @@ const FilterBar = () => {
             </Button>
           </Link>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Row>
   );
 };
 

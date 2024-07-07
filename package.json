@@ -7,6 +7,7 @@
     "build:docs": "pnpm --recursive --filter=docs build",
     "build:core": "pnpm --recursive --filter=core build",
     "build:ui": "pnpm --recursive --filter=@artimisjs/ui build",
+    "build:packages": "pnpm build:core && pnpm build:ui",
     "dev": "turbo dev",
     "dev:ui": "pnpm --recursive --filter=@artimisjs/ui dev",
     "storybook:ui": "pnpm --recursive --filter=@artimisjs/ui storybook",

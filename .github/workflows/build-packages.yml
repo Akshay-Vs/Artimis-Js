@@ -1,4 +1,4 @@
-name: Version or Publish
+name: Build and Test Packages
 
 on:
   pull_request:

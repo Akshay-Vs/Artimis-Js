@@ -1,6 +1,16 @@
 {
   "name": "artemis-js",
   "private": true,
+  "author": "Akshay-Vs",
+  "license": "MIT",
+  "description": "Artimis.Js",
+  "keywords": [
+    "react",
+    "ui",
+    "tailwindcss",
+    "artimis",
+    "ecommerce"
+  ],
   "scripts": {
     "release": "pnpm run build && changeset publish",
     "build": "turbo build",
@@ -36,5 +46,13 @@
   },
   "dependencies": {
     "@commitlint/config-conventional": "^19.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshay-Vs/Artimis-Js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Akshay-Vs/Artimis-Js.git/issues"
+  },
+  "homepage": "https://github.com/Akshay-Vs/Artimis-Js.git#readme"
 }

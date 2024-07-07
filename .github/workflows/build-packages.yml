@@ -2,13 +2,13 @@ name: Build and Test Packages
 
 on:
   pull_request:
-    types: [opened, reopened]
-
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+    types: [opened, synchronize]
 
 jobs:
   release:
     runs-on: ${{ matrix.os }}
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
     strategy:
       matrix:

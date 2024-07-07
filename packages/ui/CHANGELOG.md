@@ -1,5 +1,13 @@
 # @artimisjs/ui
 
+## 0.1.10
+
+### Patch Changes
+
+- a90f165: updated package details, bug fixes
+- Updated dependencies [a90f165]
+  - @artimisjs/core@0.2.4
+
 ## 0.1.9
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @artimisjs/core
 
+## 0.2.4
+
+### Patch Changes
+
+- a90f165: updated package details, bug fixes
+
 ## 0.2.3
 
 ### Patch Changes

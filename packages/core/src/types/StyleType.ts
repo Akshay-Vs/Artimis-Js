@@ -1,14 +1,18 @@
 export type StyleType = {
-  theme?: {
-    dark: {
-      primary: string;
-      secondary: string;
-      accent: string;
-    };
-    light: {
-      primary: string;
-      secondary: string;
-      accent: string;
-    };
-  };
+  colors?: {
+    primaryColor?: string,
+    secondaryColor?: string,
+    successColor?: string,
+    accentColor?: string,
+    backgroundColor?: string,
+    fontColor?: string,
+    warningColor?: string,
+    errorColor?: string,
+    infoColor?: string,
+  },
+  tokens?: {
+    radius?: 'none' | 'sm' | 'md' | 'lg' | '|xl' | '2xl' | '3xl',
+  },
+  plugins?: {
+  }
 }

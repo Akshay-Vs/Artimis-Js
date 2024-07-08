@@ -11,11 +11,9 @@ type colorsType = {
 }
 
 export type StyleType = {
-  colors?: {
-    theme?: {
-      dark: colorsType,
-      light: colorsType,
-    }
+  theme?: {
+    dark: colorsType,
+    light: colorsType,
   },
   tokens?: {
     radius?: 'none' | 'sm' | 'md' | 'lg' | '|xl' | '2xl' | '3xl',

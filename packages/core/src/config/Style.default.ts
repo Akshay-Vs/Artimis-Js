@@ -1,14 +1,16 @@
-export const defaultStyle = {
+import { StyleType } from "..";
+
+export const defaultStyle: StyleType = {
   theme: {
     dark: {
-      primary: '#fff',
-      secondary: '#000',
-      accent: '#9ad3f',
+      primaryColor: '#fff',
+      secondaryColor: '#000',
+      accentColor: '#9ad3f',
     },
     light: {
-      primary: '#000',
-      secondary: '#fff',
-      accent: '#9ad3f',
+      primaryColor: '#000',
+      secondaryColor: '#fff',
+      accentColor: '#9ad3f',
     },
-  },
+  }
 }

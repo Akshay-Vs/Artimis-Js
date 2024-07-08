@@ -5,18 +5,16 @@ import ChildComponent from './ChildComponent';
 const App = () => {
   const dataProvider = { data: () => 'Hello World' };
   const styleProvider: StyleType = {
-    colors: {
-      theme: {
-        dark: {
-          primaryColor: '#fff',
-          secondaryColor: '#000',
-          accentColor: '#9ad3f',
-        },
-        light: {
-          primaryColor: '#000',
-          secondaryColor: '#fff',
-          accentColor: '#9ad3f',
-        },
+    theme: {
+      dark: {
+        primaryColor: '#fff',
+        secondaryColor: '#000',
+        accentColor: '#9ad3f',
+      },
+      light: {
+        primaryColor: '#000',
+        secondaryColor: '#fff',
+        accentColor: '#9ad3f',
       },
     },
   };

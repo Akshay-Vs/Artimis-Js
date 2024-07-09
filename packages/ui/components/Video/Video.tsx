@@ -4,11 +4,12 @@ import { HTMLProps, forwardRef } from 'react';
 type VideoProps = HTMLProps<HTMLVideoElement>;
 
 const Video = forwardRef<HTMLVideoElement, VideoProps>(
-  ({ src }: VideoProps) => {
+  ({ src }: VideoProps, ref) => {
     return (
       <video
         width="1080"
         height="1080"
+        ref={ref}
         loop
         muted
         autoPlay

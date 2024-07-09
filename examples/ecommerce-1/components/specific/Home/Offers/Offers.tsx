@@ -63,7 +63,7 @@ const Offers = () => {
   ];
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4 mt-32">
       <Text size="xxhuge">Offers For You</Text>
       <div className="grid md:grid-cols-3 sm:grid-cols-1 lsm:grid-cols-2 gap-4">
         {offers.map((offer) => (

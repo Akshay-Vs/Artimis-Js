@@ -91,8 +91,8 @@ const Footer = () => {
                 {category}
               </Text>
               {links.map((link, idx) => (
-                <Link href="#">
-                  <Text key={idx}>{link}</Text>
+                <Link href="#" key={idx}>
+                  <Text>{link}</Text>
                 </Link>
               ))}
             </Column>

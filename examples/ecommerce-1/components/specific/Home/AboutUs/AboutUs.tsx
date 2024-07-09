@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import Footer from '../Footer/Footer';
 
 const AboutUs = () => {
   return (
@@ -59,6 +60,8 @@ const AboutUs = () => {
           </h2>
         </Card>
       </Row>
+
+      <Footer />
     </section>
   );
 };

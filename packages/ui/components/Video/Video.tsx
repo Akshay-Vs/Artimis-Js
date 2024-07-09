@@ -14,7 +14,7 @@ const Video = forwardRef<HTMLVideoElement, VideoProps>(
         muted
         autoPlay
         preload="none"
-        className={`object-cover object-center bg-gray-200`}
+        className={`object-cover object-center bg-gray-200 w-full h-full`}
       >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.

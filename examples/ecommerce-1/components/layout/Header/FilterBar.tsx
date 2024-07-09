@@ -1,5 +1,4 @@
-import { Input } from '@/components/common';
-import { Button, DropDown, Row } from '@artimisjs/ui';
+import { Button, DropDown, Row, Input } from '@artimisjs/ui';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import React from 'react';
@@ -37,12 +36,7 @@ const FilterBar = () => {
         title={'Filter By'}
       />
 
-      <Input
-        type="text"
-        placeholder="Search"
-        containerClassName="w-[30vw]"
-        icon={faSearch}
-      />
+      <Input type="text" placeholder="Search" icon={faSearch} />
 
       <Row className="flex-center-between gap-4">
         {buttons.map((button) => (

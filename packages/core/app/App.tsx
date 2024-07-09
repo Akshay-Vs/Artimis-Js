@@ -7,14 +7,14 @@ const App = () => {
   const styleProvider: StyleType = {
     theme: {
       dark: {
-        primary: '#fff',
-        secondary: '#000',
-        accent: '#fafafa',
+        primaryColor: '#fff',
+        secondaryColor: '#000',
+        accentColor: '#9ad3f',
       },
       light: {
-        primary: '#000',
-        secondary: '#fff',
-        accent: '#9ad3f',
+        primaryColor: '#000',
+        secondaryColor: '#fff',
+        accentColor: '#9ad3f',
       },
     },
   };

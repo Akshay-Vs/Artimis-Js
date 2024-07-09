@@ -1,34 +1,24 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, PropsWithChildren } from 'react';
 
-type InputHTMLAttributesWithIcon = InputHTMLAttributes<HTMLInputElement> & {
-  icon?: IconProp;
-  containerClassName?: string;
-};
+type InputHTMLAttributesWithIcon = InputHTMLAttributes<HTMLInputElement> &
+  PropsWithChildren & {
+    containerClassName?: string;
+  };
 
 const Input = ({
-  icon,
   containerClassName,
+  children,
   ...rest
 }: InputHTMLAttributesWithIcon) => {
   return (
     <div
-      className={`border-[1px] p-3 px-[5px] pl-5 h-12 rounded-full flex-center-between
-        text-[#595959] transition-all duration-300 bg-[#fafafa] gap-4 font-[500] ${containerClassName}`}
+      className={`border-[1px] p-2 pl-5 rounded-3xl flex-center-between transition-all duration-300 gap-4 font-[500] text-[#595959] bg-[#fafafa] border-[#e5e7eb] ${containerClassName}`}
     >
       <input
         {...rest}
         className="border-none outline-none bg-transparent w-[80%]"
       />
-      {icon && (
-        <button
-          className="h-9 w-9 rounded-full bg-[#ededed] flex-center hover:invert 
-            transition-all duration-300"
-        >
-          <FontAwesomeIcon icon={icon} />
-        </button>
-      )}
+      {children}
     </div>
   );
 };

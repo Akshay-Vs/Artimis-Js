@@ -1,5 +1,4 @@
-import { Video } from '@/components/common';
-import { Card } from '@artimisjs/ui';
+import { Card, Video } from '@artimisjs/ui';
 import React from 'react';
 
 const Promo = () => {

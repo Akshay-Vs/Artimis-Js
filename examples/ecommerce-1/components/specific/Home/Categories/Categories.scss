@@ -1,20 +1,20 @@
 .categories {
   &__text-gradient {
-    &--casual {
+    &--1 {
       background: -webkit-linear-gradient(#ffffff, #dae9eb, #00000000);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    &--sports {
+    &--2 {
       background: -webkit-linear-gradient(#ffffff, #c8c9b9, #00000000);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    &--formal {
+    &--3 {
       background: -webkit-linear-gradient(#cceafb, #cef3f8, #e7e4c359);
       -webkit-background-clip: text;
       background-clip: text;

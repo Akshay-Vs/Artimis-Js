@@ -8,8 +8,8 @@ const Promo = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(
     scrollYProgress,
-    [0, 0.3, 0.5, 1],
-    ['100%', '100%', '130%', '130%']
+    [0, 0.3, 0.35, 1],
+    ['100%', '100%', '110%', '110%']
   );
 
   const radius = useTransform(
@@ -20,7 +20,7 @@ const Promo = () => {
 
   return (
     <section className="relative flex-col gap-4 h-[300vh]" ref={targetRef}>
-      <motion.div className="sticky top-[10vh] h-screen" style={{ scale }}>
+      <motion.div className="sticky top-[4vh] h-screen" style={{ scale }}>
         <motion.div
           className="shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden"
           style={{ borderRadius: radius }}

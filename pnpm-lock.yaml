@@ -89,51 +89,14 @@ importers:
         specifier: ^5
         version: 5.3.3
 
-  examples/ecom-furniture-store:
-    dependencies:
-      next:
-        specifier: 14.2.5
-        version: 14.2.5(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
-      react:
-        specifier: ^18
-        version: 18.3.1
-      react-dom:
-        specifier: ^18
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@types/node':
-        specifier: ^20
-        version: 20.11.24
-      '@types/react':
-        specifier: ^18
-        version: 18.3.3
-      '@types/react-dom':
-        specifier: ^18
-        version: 18.3.0
-      eslint:
-        specifier: ^8
-        version: 8.57.0
-      eslint-config-next:
-        specifier: 14.2.5
-        version: 14.2.5(eslint@8.57.0)(typescript@5.5.2)
-      postcss:
-        specifier: ^8
-        version: 8.4.38
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.4
-      typescript:
-        specifier: ^5
-        version: 5.5.2
-
-  examples/ecommerce-1:
+  examples/ecom-clothing-store:
     dependencies:
       '@artimisjs/core':
         specifier: latest
-        version: 0.2.3(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        version: 0.2.4(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@artimisjs/ui':
         specifier: latest
-        version: 0.1.8(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        version: 0.1.10(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@fortawesome/fontawesome-svg-core':
         specifier: ^6.5.2
         version: 6.5.2
@@ -210,6 +173,43 @@ importers:
       eslint-config-next:
         specifier: 14.2.4
         version: 14.2.4(eslint@8.57.0)(typescript@5.5.2)
+      postcss:
+        specifier: ^8
+        version: 8.4.38
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.4
+      typescript:
+        specifier: ^5
+        version: 5.5.2
+
+  examples/ecom-furniture-store:
+    dependencies:
+      next:
+        specifier: 14.2.5
+        version: 14.2.5(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
+      react:
+        specifier: ^18
+        version: 18.3.1
+      react-dom:
+        specifier: ^18
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.11.24
+      '@types/react':
+        specifier: ^18
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.3.0
+      eslint:
+        specifier: ^8
+        version: 8.57.0
+      eslint-config-next:
+        specifier: 14.2.5
+        version: 14.2.5(eslint@8.57.0)(typescript@5.5.2)
       postcss:
         specifier: ^8
         version: 8.4.38
@@ -468,6 +468,12 @@ packages:
 
   '@artimisjs/core@0.2.3':
     resolution: {integrity: sha512-CLD6HJJnRqMQZwaetsdGzhfHp3Dpo/vQL+Yc4Q+Scb2kJwWGDQfoH6RavNLhMn/W+XIljYc5Pt5l/ZmNf4oTYQ==}
+
+  '@artimisjs/core@0.2.4':
+    resolution: {integrity: sha512-cQdzGbQm42cO2d464XhFEa6bebVrqPSTQXlcITXCxYxyA92eSu0Z3eJuCJMCn75HvT1j4dhVqM7B3n4m6dAkJg==}
+
+  '@artimisjs/ui@0.1.10':
+    resolution: {integrity: sha512-VZ4DVwr1/IDbj+mtgg9oCK0Sg/3eGeRAaJxDW4Uj6n/0BqLpEFUXysuSlYP3kc7s987VLLbs/oz55dLp6kkEfQ==}
 
   '@artimisjs/ui@0.1.8':
     resolution: {integrity: sha512-1L4D0ZpvQ795Zz3IRV3HPTmFBVLNq1/hAyYNDnxg+Ehj3pIC1SKjc0DMpmBeXjewNT+y9Xap21glsDcQWvtlBg==}
@@ -6968,7 +6974,7 @@ snapshots:
       - typescript
       - vite
 
-  '@artimisjs/core@0.2.3(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+  '@artimisjs/core@0.2.4(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -6976,6 +6982,25 @@ snapshots:
       vite-tsconfig-paths: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
     transitivePeerDependencies:
       - '@types/node'
+      - rollup
+      - supports-color
+      - typescript
+      - vite
+
+  '@artimisjs/ui@0.1.10(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+    dependencies:
+      '@artimisjs/core': 0.2.4(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      '@studio-freight/react-lenis': 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      class-variance-authority: 0.7.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tailwind-merge: 2.3.0
+      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      vite-tsconfig-paths: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+    transitivePeerDependencies:
+      - '@types/node'
+      - immer
       - rollup
       - supports-color
       - typescript
@@ -6992,25 +7017,6 @@ snapshots:
       tailwind-merge: 2.3.0
       vite-plugin-dts: 3.9.1(@types/node@20.11.24)(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       vite-tsconfig-paths: 4.3.2(typescript@5.3.3)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
-    transitivePeerDependencies:
-      - '@types/node'
-      - immer
-      - rollup
-      - supports-color
-      - typescript
-      - vite
-
-  '@artimisjs/ui@0.1.8(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
-    dependencies:
-      '@artimisjs/core': 0.2.3(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
-      '@studio-freight/react-lenis': 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      tailwind-merge: 2.3.0
-      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
-      vite-tsconfig-paths: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
     transitivePeerDependencies:
       - '@types/node'
       - immer
@@ -11530,7 +11536,7 @@ snapshots:
       '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.3.3)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.3(eslint@8.57.0)
@@ -11548,7 +11554,7 @@ snapshots:
       '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.5.2)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.3(eslint@8.57.0)
@@ -11636,12 +11642,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0):
+  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
     dependencies:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.1
       get-tsconfig: 4.7.2
@@ -11704,31 +11710,14 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
-    dependencies:
-      debug: 4.3.4
-      enhanced-resolve: 5.15.0
-      eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
-      fast-glob: 3.3.1
-      get-tsconfig: 4.7.2
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-    transitivePeerDependencies:
-      - '@typescript-eslint/parser'
-      - eslint-import-resolver-node
-      - eslint-import-resolver-webpack
-      - supports-color
-
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.3.3)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11765,17 +11754,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
-    dependencies:
-      debug: 3.2.7
-    optionalDependencies:
-      '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.5.2)
-      eslint: 8.57.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
-    transitivePeerDependencies:
-      - supports-color
-
   eslint-module-utils@2.8.0(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
@@ -11809,7 +11787,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3

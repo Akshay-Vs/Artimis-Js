@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 type TextProps = {
   size?:
     | 'xs'
@@ -63,21 +63,24 @@ const sizes = {
   },
 };
 
-const Text = ({ size = 'md', children, className }: TextProps) => {
-  const fontStyle = sizes[size];
+const Text = forwardRef<HTMLDivElement, TextProps>(
+  ({ size = 'md', children, className }, ref) => {
+    const fontStyle = sizes[size];
 
-  return (
-    <div
-      className={`text-[${size}] ${className}`}
-      style={{
-        fontSize: `${fontStyle.fontSize}px`,
-        lineHeight: `${fontStyle.lineHeight}`,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
+    return (
+      <div
+        ref={ref}
+        className={`text-[${size}] ${className}`}
+        style={{
+          fontSize: `${fontStyle.fontSize}px`,
+          lineHeight: `${fontStyle.lineHeight}`,
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 
 export { Text };
 export type { TextProps };

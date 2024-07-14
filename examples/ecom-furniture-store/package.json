@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@artimisjs/core": "^0.2.5",
-    "@artimisjs/ui": "^0.1.11",
+    "@artimisjs/core": "latest",
+    "@artimisjs/ui": "latest",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
@@ -22,6 +22,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
+    "sass": "^1.77.6",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

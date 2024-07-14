@@ -1,5 +1,11 @@
 # @artimisjs/core
 
+## 0.2.5
+
+### Patch Changes
+
+- d091493: Feature improvements
+
 ## 0.2.4
 
 ### Patch Changes

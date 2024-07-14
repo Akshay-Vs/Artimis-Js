@@ -1,5 +1,13 @@
 # @artimisjs/ui
 
+## 0.1.11
+
+### Patch Changes
+
+- d091493: Feature improvements
+- Updated dependencies [d091493]
+  - @artimisjs/core@0.2.5
+
 ## 0.1.10
 
 ### Patch Changes

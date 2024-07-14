@@ -1,5 +1,11 @@
 # @artimisjs/ui
 
+## 0.1.12
+
+### Patch Changes
+
+- fixed forward ref warning
+
 ## 0.1.11
 
 ### Patch Changes

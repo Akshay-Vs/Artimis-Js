@@ -2,7 +2,11 @@ import type { Metadata } from 'next';
 import { EB_Garamond } from 'next/font/google';
 import './globals.scss';
 import { Navbar } from '@/components/specific';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
 import '@artimisjs/ui/style';
+
+config.autoAddCss = false;
 
 const ebGaramond = EB_Garamond({ subsets: ['latin'] });
 

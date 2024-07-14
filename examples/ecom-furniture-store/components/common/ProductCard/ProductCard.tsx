@@ -1,9 +1,11 @@
 'use client';
 
-import { Card, Row, Text } from '@artimisjs/ui';
-import Image from 'next/image';
+import { Card, Row } from '@artimisjs/ui';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import ProductImage from './ProductImage';
+import ProductName from './ProductName';
+import ProductPrice from './ProductPrice';
 
 interface ProductCardProps {
   src: string;
@@ -23,25 +25,18 @@ const ProductCard = ({ src, name, href, price }: ProductCardProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Card height="md" width="full" className="rounded-none">
-        <Card.Backdrop className="h-full w-full">
-          <Image
-            src={src}
-            alt={name}
-            height={720}
-            width={720}
-            className={`h-full w-full object-cover object-center transition-all duration-300 ${ishovered ? 'scale-105' : ''}`}
-          />
-        </Card.Backdrop>
+        <ProductImage
+          src={src}
+          name={name}
+          height={720}
+          width={720}
+          isHovered={ishovered}
+        />
       </Card>
 
       <Row className="flex-center-between px-1">
-        <Text
-          size="xl"
-          className={`underline-offset-4 ${ishovered ? 'underline' : ''}`}
-        >
-          {name.toLocaleUpperCase()}
-        </Text>
-        {price ? <Text size="xl">€{price}</Text> : null}
+        <ProductName name={name} isHovered={ishovered} />
+        <ProductPrice price={price} />
       </Row>
     </Link>
   );

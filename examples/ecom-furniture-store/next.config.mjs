@@ -7,6 +7,12 @@ const nextConfig = {
         hostname: 'video-previews.elements.envatousercontent.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        port: '',
+        pathname: '/**',
       }
     ]
   }

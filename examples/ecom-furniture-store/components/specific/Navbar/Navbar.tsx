@@ -46,7 +46,9 @@ const Navbar: React.FC<NavbarProps> = () => {
         <NavigationLinks links={navLinks} />
 
         <Row className="absolute left-1/2 transform -translate-x-1/2">
-          <Text size="huge">Artimis</Text>
+          <Text size="huge" className="font-[500]">
+            <span className="text-blue-500">A</span>rtimis
+          </Text>
         </Row>
 
         <Button variant="outlined" className="bg-transparent gap-2 flex-center">

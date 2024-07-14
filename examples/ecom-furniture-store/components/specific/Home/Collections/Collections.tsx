@@ -1,5 +1,5 @@
 import { ProductCard } from '@/components/common';
-import { Row, Text } from '@artimisjs/ui';
+import { Column, Row, Text } from '@artimisjs/ui';
 import React from 'react';
 
 const Collections = () => {
@@ -16,19 +16,22 @@ const Collections = () => {
     },
     {
       src: 'https://images.pexels.com/photos/2995012/pexels-photo-2995012.jpeg',
-      name: 'Modern Table',
+      name: 'Modern Interior',
       href: '#',
     },
   ];
   return (
-    <section className="mt-12">
-      <Text size="xl" className="text-center">
-        Explore our
-      </Text>
-      <Text size="huge" className="text-center">
-        Our Collections
-      </Text>
-      <Row className="gap-4 mt-8">
+    <section className="mt-12 flex flex-col gap-8">
+      <Column>
+        <Text size="xl" className="text-center">
+          Explore our
+        </Text>
+        <Text size="huge" className="text-center">
+          Our Collections
+        </Text>
+      </Column>
+
+      <Row className="gap-4">
         {collections.map((product) => (
           <ProductCard
             key={product.name}

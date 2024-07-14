@@ -41,11 +41,7 @@ const ProductCard = ({ src, name, href, price }: ProductCardProps) => {
         >
           {name.toLocaleUpperCase()}
         </Text>
-        {price ? (
-          <Text size="xl" className={`underline-offset-4`}>
-            €{price}
-          </Text>
-        ) : null}
+        {price ? <Text size="xl">€{price}</Text> : null}
       </Row>
     </Link>
   );

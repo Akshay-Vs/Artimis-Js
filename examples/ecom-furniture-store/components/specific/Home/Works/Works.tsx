@@ -35,7 +35,10 @@ const Works = () => {
       </Text>
       <Column className="gap-24">
         {works.map((work, index) => (
-          <Row className={`${index % 2 === 0 ? '' : 'flex-row-reverse'}`}>
+          <Row
+            className={`${index % 2 === 0 ? '' : 'flex-row-reverse'}`}
+            key={index}
+          >
             <WorksImage src={work.src} title={work.title} />
 
             <Column

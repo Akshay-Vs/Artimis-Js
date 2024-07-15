@@ -1,18 +1,21 @@
 import {
   AboutUs,
-  Collections,
+  InteriorCollections,
   Hero,
   SmoothScroll,
+  RoomCollections,
+  Works,
 } from '@/components/specific';
 
 export default function Home() {
   return (
     <SmoothScroll>
-      <main className="pt-2 px-12 h-[800vh] flex flex-col gap-12">
+      <main className="pt-2 px-12 h-[1000vh] flex flex-col gap-12">
         <Hero />
-        <Collections />
+        <InteriorCollections />
         <AboutUs />
-        <Collections />
+        <RoomCollections />
+        <Works />
       </main>
     </SmoothScroll>
   );

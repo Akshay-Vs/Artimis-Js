@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "ecommerce-1",
+			"path": "../../../../ecom-clothing-store"
+		},
+		{
+			"name": "ecom-furniture-store",
+			"path": "../../.."
+		},
+		{
+			"name": "📦 @artimisjs/ui",
+			"path": "../../../../../packages/ui"
+		}
+	],
+	"settings": {}
+}

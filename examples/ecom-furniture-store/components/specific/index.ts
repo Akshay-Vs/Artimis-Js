@@ -1,13 +1,17 @@
 import Navbar from "./Navbar/Navbar";
 import Hero from "./Home/Hero/Hero";
 import SmoothScroll from "./SmoothScroll/SmoothScroll";
-import Collections from "./Home/Collections/Collections";
+import InteriorCollections from "./Home/Collections/InteriorCollections";
+import RoomCollections from "./Home/Collections/RoomCollections";
 import AboutUs from "./Home/AboutUs/AboutUs";
+import Works from "./Home/Works/Works";
 
 export {
   Navbar,
   Hero,
   SmoothScroll,
-  Collections,
-  AboutUs
+  InteriorCollections,
+  RoomCollections,
+  AboutUs,
+  Works
 }

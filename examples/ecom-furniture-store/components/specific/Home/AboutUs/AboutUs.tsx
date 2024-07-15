@@ -1,10 +1,11 @@
+import { Section } from '@/components/common';
 import { Card, Column, Row, Text } from '@artimisjs/ui';
 import Image from 'next/image';
 import React from 'react';
 
 const AboutUs = () => {
   return (
-    <section className="flex flex-col gap-8 mt-12">
+    <Section>
       <Row>
         <Column align="center" className="scale-105 gap-6 px-20 text-center">
           <Text size="huge">Lorem Ipsum</Text>
@@ -34,7 +35,7 @@ const AboutUs = () => {
           </Card.Backdrop>
         </Card>
       </Row>
-    </section>
+    </Section>
   );
 };
 

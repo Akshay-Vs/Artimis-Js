@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { EB_Garamond } from 'next/font/google';
 import './globals.scss';
-import { Navbar } from '@/components/specific';
+import { Footer, Navbar } from '@/components/specific';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@artimisjs/ui/style';
@@ -25,6 +25,7 @@ export default function RootLayout({
       <body className={ebGaramond.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

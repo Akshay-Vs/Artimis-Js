@@ -1,6 +1,5 @@
 import { ProductCard, Section, TextBlock } from '@/components/common';
-import { Card, Column, Row, Text } from '@artimisjs/ui';
-import Image from 'next/image';
+import { Row } from '@artimisjs/ui';
 import React from 'react';
 
 const BoughtTogether = () => {

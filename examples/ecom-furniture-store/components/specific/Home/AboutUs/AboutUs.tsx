@@ -1,5 +1,5 @@
 import { Section, TextBlock } from '@/components/common';
-import { Card, Column, Row, Text } from '@artimisjs/ui';
+import { Card, Row } from '@artimisjs/ui';
 import Image from 'next/image';
 import React from 'react';
 

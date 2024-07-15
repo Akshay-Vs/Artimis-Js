@@ -1,9 +1,11 @@
 import ProductCard from "./ProductCard/ProductCard";
-import SectionCaousel from "./SectionCarousel/SectionCarousel";
+import Caousel from "./Carousel/Carousel";
 import Section from "./Section/Section";
+import TextBlock from "./TextBlock/TextBlock";
 
 export {
   ProductCard,
-  SectionCaousel,
-  Section
+  Caousel,
+  Section,
+  TextBlock
 }

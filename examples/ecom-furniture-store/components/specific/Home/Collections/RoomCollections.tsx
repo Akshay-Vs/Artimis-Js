@@ -1,4 +1,4 @@
-import { SectionCaousel } from '@/components/common';
+import { Caousel, Section } from '@/components/common';
 import React from 'react';
 
 const RoomCollections = () => {
@@ -20,11 +20,9 @@ const RoomCollections = () => {
     },
   ];
   return (
-    <SectionCaousel
-      subHeading="Explore our"
-      heading="Room Collections"
-      products={collections}
-    />
+    <Section subHeading="Explore our" heading="Room Collections">
+      <Caousel products={collections} />
+    </Section>
   );
 };
 

@@ -6,6 +6,7 @@ import RoomCollections from "./Home/Collections/RoomCollections";
 import AboutUs from "./Home/AboutUs/AboutUs";
 import Works from "./Home/Works/Works";
 import BoughtTogether from "./Home/BoughtTogether/BoughtTogether";
+import Categories from "./Home/Categories/Categories";
 
 export {
   Navbar,
@@ -15,5 +16,6 @@ export {
   RoomCollections,
   AboutUs,
   Works,
-  BoughtTogether
+  BoughtTogether,
+  Categories
 }

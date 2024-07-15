@@ -3,32 +3,17 @@ import { Column, Row, Text } from '@artimisjs/ui';
 import React from 'react';
 import Section from '../Section/Section';
 
-interface SectionCarouselProps {
+interface CarouselProps {
   products: {
     src: string;
     name: string;
     href: string;
   }[];
-  subHeading: string;
-  heading: string;
 }
 
-const SectionCarousel = ({
-  products,
-  subHeading,
-  heading,
-}: SectionCarouselProps) => {
+const Carousel = ({ products }: CarouselProps) => {
   return (
     <Section>
-      <Column>
-        <Text size="xl" className="text-center">
-          {subHeading}
-        </Text>
-        <Text size="huge" className="text-center">
-          {heading}
-        </Text>
-      </Column>
-
       <Row className="gap-4">
         {products.map((product) => (
           <ProductCard
@@ -43,4 +28,4 @@ const SectionCarousel = ({
   );
 };
 
-export default SectionCarousel;
+export default Carousel;

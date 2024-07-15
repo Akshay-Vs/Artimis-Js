@@ -1,9 +1,9 @@
 import ProductCard from "./ProductCard/ProductCard";
-import SectionCaousel from "./SectionCarousel/SectionCarousel";
+import Caousel from "./Carousel/Carousel";
 import Section from "./Section/Section";
 
 export {
   ProductCard,
-  SectionCaousel,
+  Caousel,
   Section
 }

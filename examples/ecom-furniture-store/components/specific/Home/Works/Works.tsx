@@ -29,7 +29,7 @@ const Works = () => {
   ];
 
   return (
-    <Section>
+    <Section className="gap-8">
       <Text size="huge" className="text-center">
         Our Works
       </Text>

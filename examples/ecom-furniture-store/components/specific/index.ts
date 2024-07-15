@@ -5,6 +5,7 @@ import InteriorCollections from "./Home/Collections/InteriorCollections";
 import RoomCollections from "./Home/Collections/RoomCollections";
 import AboutUs from "./Home/AboutUs/AboutUs";
 import Works from "./Home/Works/Works";
+import BoughtTogether from "./Home/BoughtTogether/BoughtTogether";
 
 export {
   Navbar,
@@ -13,5 +14,6 @@ export {
   InteriorCollections,
   RoomCollections,
   AboutUs,
-  Works
+  Works,
+  BoughtTogether
 }

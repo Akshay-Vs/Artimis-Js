@@ -5,6 +5,7 @@ import {
   SmoothScroll,
   RoomCollections,
   Works,
+  BoughtTogether,
 } from '@/components/specific';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutUs />
         <RoomCollections />
         <Works />
+        <BoughtTogether />
       </main>
     </SmoothScroll>
   );

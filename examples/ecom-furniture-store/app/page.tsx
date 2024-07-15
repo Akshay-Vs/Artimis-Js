@@ -7,12 +7,13 @@ import {
   Works,
   BoughtTogether,
   Categories,
+  ProductsGrid,
 } from '@/components/specific';
 
 export default function Home() {
   return (
     <SmoothScroll>
-      <main className="pt-2 px-12 h-[1200vh] flex flex-col gap-12">
+      <main className="pt-2 px-12 flex flex-col gap-12">
         <Hero />
         <InteriorCollections />
         <AboutUs />
@@ -20,6 +21,7 @@ export default function Home() {
         <Works />
         <Categories />
         <BoughtTogether />
+        <ProductsGrid />
       </main>
     </SmoothScroll>
   );

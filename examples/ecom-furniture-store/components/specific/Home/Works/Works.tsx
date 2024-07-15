@@ -1,4 +1,4 @@
-import { Section } from '@/components/common';
+import { Section, TextBlock } from '@/components/common';
 import { Column, Row, Text } from '@artimisjs/ui';
 import React from 'react';
 import WorksImage from './WorksImage';
@@ -41,17 +41,7 @@ const Works = () => {
           >
             <WorksImage src={work.src} title={work.title} />
 
-            <Column
-              align="center"
-              className="scale-105 gap-6 px-20 text-center"
-            >
-              <Text size="huge">{work.title}</Text>
-              <Text size="xl" className="flex flex-col gap-4">
-                {work.description.split('\n').map((line, index) => (
-                  <p key={index}>{line}</p>
-                ))}
-              </Text>
-            </Column>
+            <TextBlock title={work.title} description={work.description} />
           </Row>
         ))}
       </Column>

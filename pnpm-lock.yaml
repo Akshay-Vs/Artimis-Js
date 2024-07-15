@@ -186,11 +186,29 @@ importers:
   examples/ecom-furniture-store:
     dependencies:
       '@artimisjs/core':
-        specifier: ^0.2.4
-        version: 0.2.4(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        specifier: latest
+        version: 0.2.5(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@artimisjs/ui':
-        specifier: ^0.1.10
-        version: 0.1.10(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+        specifier: latest
+        version: 0.1.11(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      '@fortawesome/fontawesome-svg-core':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/free-brands-svg-icons':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/free-solid-svg-icons':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/react-fontawesome':
+        specifier: ^0.2.2
+        version: 0.2.2(@fortawesome/fontawesome-svg-core@6.5.2)(react@18.3.1)
+      '@studio-freight/react-lenis':
+        specifier: ^0.0.47
+        version: 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion:
+        specifier: ^11.2.14
+        version: 11.2.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: 14.2.5
         version: 14.2.5(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
@@ -219,6 +237,9 @@ importers:
       postcss:
         specifier: ^8
         version: 8.4.38
+      sass:
+        specifier: ^1.77.6
+        version: 1.77.6
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.4
@@ -478,8 +499,14 @@ packages:
   '@artimisjs/core@0.2.4':
     resolution: {integrity: sha512-cQdzGbQm42cO2d464XhFEa6bebVrqPSTQXlcITXCxYxyA92eSu0Z3eJuCJMCn75HvT1j4dhVqM7B3n4m6dAkJg==}
 
+  '@artimisjs/core@0.2.5':
+    resolution: {integrity: sha512-nKGwBwe0mCRgdHrZmF6I9j57zXclsA4vqx0Ffetpu/oYoMJ1572UxLF2Pv2GugpmA8NZWtpjajWkTgzsnbHd7w==}
+
   '@artimisjs/ui@0.1.10':
     resolution: {integrity: sha512-VZ4DVwr1/IDbj+mtgg9oCK0Sg/3eGeRAaJxDW4Uj6n/0BqLpEFUXysuSlYP3kc7s987VLLbs/oz55dLp6kkEfQ==}
+
+  '@artimisjs/ui@0.1.11':
+    resolution: {integrity: sha512-3OQBKbCYo5cPdf3fTVUItd8wMpfgkcNgXEo/2W7xXhxEArFJUQsFo7y7YMdJEQXOf5VI8NuQdR/nDMU0sLGXUQ==}
 
   '@artimisjs/ui@0.1.8':
     resolution: {integrity: sha512-1L4D0ZpvQ795Zz3IRV3HPTmFBVLNq1/hAyYNDnxg+Ehj3pIC1SKjc0DMpmBeXjewNT+y9Xap21glsDcQWvtlBg==}
@@ -6993,9 +7020,41 @@ snapshots:
       - typescript
       - vite
 
+  '@artimisjs/core@0.2.5(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      vite-tsconfig-paths: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+    transitivePeerDependencies:
+      - '@types/node'
+      - rollup
+      - supports-color
+      - typescript
+      - vite
+
   '@artimisjs/ui@0.1.10(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
     dependencies:
       '@artimisjs/core': 0.2.4(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      '@studio-freight/react-lenis': 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      class-variance-authority: 0.7.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tailwind-merge: 2.3.0
+      vite-plugin-dts: 3.9.1(@types/node@20.11.24)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+      vite-tsconfig-paths: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
+    transitivePeerDependencies:
+      - '@types/node'
+      - immer
+      - rollup
+      - supports-color
+      - typescript
+      - vite
+
+  '@artimisjs/ui@0.1.11(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))':
+    dependencies:
+      '@artimisjs/core': 0.2.5(@types/node@20.11.24)(typescript@5.5.2)(vite@5.3.1(@types/node@20.11.24)(sass@1.77.6))
       '@studio-freight/react-lenis': 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       class-variance-authority: 0.7.0
       clsx: 2.1.1

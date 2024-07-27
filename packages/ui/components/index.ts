@@ -11,6 +11,7 @@ export { Video } from "./Video/Video"
 export { Input } from "./Input/Input"
 export { Row } from "./Row/Row"
 export { Column } from "./Column/Column"
+export { Flex } from "./Flex/Flex"
 
 // types
 export type { ButtonProps } from './Button/Button'
@@ -19,3 +20,4 @@ export type { DropDownProps } from './DropDown/DropDown'
 export type { CardProps, BackdropProps, FooterProps, HeaderProps } from './Cards/Card'
 export type { CircleProps, } from './Circle/Circle'
 export type { VideoProps } from './Video/Video'
+export type { FlexProps, } from './Flex/Flex'

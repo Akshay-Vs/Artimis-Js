@@ -1,5 +1,11 @@
 # @artimisjs/ui
 
+## 0.1.13
+
+### Patch Changes
+
+- 0046204: Added New Components, Improved features, Fixed known bugs
+
 ## 0.1.12
 
 ### Patch Changes

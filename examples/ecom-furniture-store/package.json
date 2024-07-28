@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@artimisjs/core": "latest",
-    "@artimisjs/ui": "latest",
+    "@artimisjs/ui": "0.1.13",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

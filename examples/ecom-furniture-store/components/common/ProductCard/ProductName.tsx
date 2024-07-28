@@ -8,7 +8,7 @@ const ProductName = ({
   isHovered: boolean;
 }) => (
   <Text
-    size="xl"
+    size="1x"
     className={`underline-offset-4 ${isHovered ? 'underline' : ''}`}
   >
     {name.toLocaleUpperCase()}

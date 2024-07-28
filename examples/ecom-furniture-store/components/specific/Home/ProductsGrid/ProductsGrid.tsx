@@ -55,7 +55,7 @@ const ProductsGrid = () => {
       </div>
       <Row align="center">
         <Button variant="outlined" className="bg-transparent gap-2 flex-center">
-          <Text size="xl">All Products</Text>
+          <Text size="1x">All Products</Text>
           <FontAwesomeIcon icon={faArrowRight} className="mt-1" />
         </Button>
       </Row>

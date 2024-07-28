@@ -15,12 +15,12 @@ const Section = ({
   ...rest
 }: SectionProps) => {
   return (
-    <section className={`mt-12 flex flex-col ${className}`} {...rest}>
-      <Column>
-        <Text size="xl" className="text-center">
+    <section className={`mt-12 flex flex-col  ${className}`} {...rest}>
+      <Column className="gap-2">
+        <Text size="1x" className="text-center">
           {subHeading}
         </Text>
-        <Text size="huge" className="text-center">
+        <Text size="5x" className="text-center">
           {heading}
         </Text>
       </Column>

@@ -30,10 +30,10 @@ const CategoriesCard = ({ src, name, href }: CategoriesCardProps) => {
              text-white flex flex-col gap-2 hover:backdrop-blur-sm duration-300 transition-all"
             align="center"
           >
-            <Text size="xhuge" className="font-[500]">
+            <Text size="5x" className="font-[500]">
               {name}
             </Text>
-            <Text size="xl" className="font-[500]">
+            <Text size="1x" className="font-[500]">
               View
             </Text>
           </Column>

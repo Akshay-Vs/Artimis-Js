@@ -30,7 +30,7 @@ const Works = () => {
 
   return (
     <Section className="gap-8">
-      <Text size="huge" className="text-center">
+      <Text size="5x" className="text-center">
         Our Works
       </Text>
       <Column className="gap-24">

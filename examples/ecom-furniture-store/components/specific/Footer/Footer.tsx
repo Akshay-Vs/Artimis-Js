@@ -67,7 +67,7 @@ const Footer = () => {
             Artimis
           </Text>
           <Text size="md">
-            Made with <FontAwesomeIcon icon={faHeart} size="xs" /> By{' '}
+            Made with <FontAwesomeIcon icon={faHeart} size="xs" /> &{' '}
             <a
               href="https://github.com/Akshay-Vs/Artimis-Js"
               target="_blank"

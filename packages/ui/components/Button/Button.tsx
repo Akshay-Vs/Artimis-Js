@@ -5,34 +5,14 @@ import cn from '@/utils/cn';
 const button = cva('transition-all duration-300 w-fit', {
   variants: {
     variant: {
-      primary: [
-        'bg-white',
-        'border-2',
-        'hover:bg-[#171614]',
-        'hover:text-white',
-      ],
-      secondary: [
-        'bg-black',
-        'text-white',
-        'border-2',
-        'border-black',
-        'hover:bg-white',
-        'hover:text-black',
-      ],
-      accent: [
-        'bg-blue-500',
-        'text-white',
-        'border-2',
-        'border-blue-500',
-        'hover:bg-blue-900',
-      ],
-      outlined: [
-        'bg-white',
-        'border-2',
-        'border-black',
-        'hover:bg-black',
-        'hover:text-white',
-      ],
+      default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+      destructive:
+        'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+      outline:
+        'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+      secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+      ghost: 'hover:bg-accent hover:text-accent-foreground',
+      link: 'text-primary underline-offset-4 hover:underline',
     },
     size: {
       sm: ['text-sm', 'h-8', 'px-2'],
@@ -53,12 +33,12 @@ const button = cva('transition-all duration-300 w-fit', {
     },
   },
   compoundVariants: [
-    { variant: 'primary', size: 'md', class: 'uppercase w-fit' },
+    { variant: 'default', size: 'md', class: 'uppercase w-fit' },
     { buttonType: 'icon', size: 'md', class: 'h-11 w-11' },
-    { buttonType: 'icon', variant: 'accent', class: 'bg-blue-700' },
+    { buttonType: 'icon', variant: 'secondary', class: '' },
   ],
   defaultVariants: {
-    variant: 'primary',
+    variant: 'default',
     size: 'md',
     buttonType: 'button',
   },

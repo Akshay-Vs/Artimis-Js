@@ -81,7 +81,7 @@ type textSizes = {
   '10x': string;
 }
 
-type gap = {
+type gapSizes = {
   default: string;
   sm: string;
   md: string;
@@ -105,5 +105,6 @@ type radius = {
 export type {
   colors,
   blockSizes,
-  radius
+  radius,
+  gapSizes
 }

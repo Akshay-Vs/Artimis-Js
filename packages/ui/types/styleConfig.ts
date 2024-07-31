@@ -34,16 +34,16 @@ export type StyleConfig = {
   },
   flex: {
     size: blockSizes;
-    gap: gapSizes
+    gap: gapSizes;
   },
   row: {
     size: blockSizes;
-    gap: gapSizes
+    gap: gapSizes;
 
   },
   column: {
     size: blockSizes;
-    gap: gapSizes
+    gap: gapSizes;
 
   }
 }

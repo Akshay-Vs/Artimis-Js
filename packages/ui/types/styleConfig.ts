@@ -1,4 +1,4 @@
-import { blockSizes, colors, gapSizes } from './base'
+import { blockSizes, colors, gapSizes, textSizes } from './base'
 
 type buttonVariants = {
   default: colors;
@@ -33,17 +33,19 @@ export type StyleConfig = {
     light: buttonVariants;
   },
   flex: {
-    size: blockSizes;
+    sizes: blockSizes;
     gap: gapSizes;
   },
   row: {
-    size: blockSizes;
+    sizes: blockSizes;
     gap: gapSizes;
 
   },
   column: {
-    size: blockSizes;
+    sizes: blockSizes;
     gap: gapSizes;
-
+  },
+  text: {
+    sizes: textSizes
   }
 }

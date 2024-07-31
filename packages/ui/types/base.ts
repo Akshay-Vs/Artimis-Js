@@ -106,5 +106,6 @@ export type {
   colors,
   blockSizes,
   radius,
-  gapSizes
+  gapSizes,
+  textSizes
 }

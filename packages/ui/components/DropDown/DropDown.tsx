@@ -68,7 +68,7 @@ const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
         <div className="flex-center-between pl-5 gap-4 w-full">
           {selected}
           <Button
-            variant={variant}
+            variant="default"
             size={size}
             buttonType="icon"
             onClick={() => setShowOptions((prev) => !prev)}

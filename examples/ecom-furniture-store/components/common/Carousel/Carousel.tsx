@@ -1,5 +1,5 @@
 import { ProductCard } from '@/components/common';
-import { Column, Row, Text } from '@artimisjs/ui';
+import { Column, Flex, Row } from '@artimisjs/ui';
 import React from 'react';
 import Section from '../Section/Section';
 
@@ -14,7 +14,7 @@ interface CarouselProps {
 const Carousel = ({ products }: CarouselProps) => {
   return (
     <Section>
-      <Row className="gap-4">
+      <div className="gap-4 flex h-[50%] lg:!flex-row flex-col">
         {products.map((product) => (
           <ProductCard
             key={product.name}
@@ -23,7 +23,7 @@ const Carousel = ({ products }: CarouselProps) => {
             src={product.src}
           />
         ))}
-      </Row>
+      </div>
     </Section>
   );
 };

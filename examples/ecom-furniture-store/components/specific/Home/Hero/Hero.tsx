@@ -11,11 +11,11 @@ const Hero = () => {
 
   return (
     <section className="lg:px-12 lg:h-[300vh] relative" ref={targetRef}>
-      <motion.div className="lg:h-[87vh] sticky top-[12vh]" style={{ scale }}>
+      <motion.div className=" lg:h-[87vh] sticky top-[12vh]" style={{ scale }}>
         <Card
           width="full"
           height="full"
-          className="rounded-none bg-transparent"
+          className="rounded-none bg-transparent scale-[130%] lg:!scale-100"
         >
           <motion.div style={{ marginTop }}>
             <Video src="https://video-previews.elements.envatousercontent.com/h264-video-previews/aa08dd9d-1593-4049-8ca5-a4031b828e14/44021676.mp4" />

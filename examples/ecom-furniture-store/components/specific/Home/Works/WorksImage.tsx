@@ -22,15 +22,29 @@ const WorksImage = ({ src, title }: { src: string; title: string }) => {
         mass: 0.5,
       }}
     >
-      <div className="bg-slate-200 overflow-hidden relative lg:min-h-[70vh] lg:max-h-[70vh] lg:min-w-[50vw] lg:max-w-[50vw] rounded-none">
-        <Image
-          src={src}
-          alt={title}
-          height={1080}
-          width={1080}
-          className="object-center object-cover h-full w-full"
-        />
-      </div>
+      {windowSize === 'desktop' ? (
+        <Card height="md" width="md" className="rounded-none">
+          <Card.Backdrop className="h-full w-full">
+            <Image
+              src={src}
+              alt={title}
+              height={1080}
+              width={1080}
+              className="object-center object-cover h-full w-full"
+            />
+          </Card.Backdrop>
+        </Card>
+      ) : (
+        <div className="bg-slate-200 overflow-hidden relative lg:min-h-[70vh] lg:max-h-[70vh] lg:min-w-[50vw] lg:max-w-[50vw] rounded-none">
+          <Image
+            src={src}
+            alt={title}
+            height={1080}
+            width={1080}
+            className="object-center object-cover h-full w-full"
+          />
+        </div>
+      )}
     </motion.div>
   );
 };

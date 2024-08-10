@@ -20,7 +20,7 @@ type NavigationLinksProps = {
 
 const NavigationLinks = ({ links }: NavigationLinksProps) => {
   return (
-    <Row className="flex gap-8 p-2">
+    <Row className="gap-8 p-2 hidden lg:flex">
       {links.map((link) => (
         <NavLink key={link.label} {...link} />
       ))}

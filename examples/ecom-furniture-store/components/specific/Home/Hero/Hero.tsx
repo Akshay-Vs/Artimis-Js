@@ -10,8 +10,8 @@ const Hero = () => {
   const marginTop = useTransform(scrollYProgress, [0, 0.5], ['10vh', '0vh']);
 
   return (
-    <section className="h-[300vh] relative" ref={targetRef}>
-      <motion.div className="h-[87vh] sticky top-[12vh]" style={{ scale }}>
+    <section className="lg:px-12 lg:h-[300vh] relative" ref={targetRef}>
+      <motion.div className="lg:h-[87vh] sticky top-[12vh]" style={{ scale }}>
         <Card
           width="full"
           height="full"

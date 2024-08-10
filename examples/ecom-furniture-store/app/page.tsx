@@ -16,7 +16,7 @@ export default function Home() {
     <SmoothScroll>
       <main className="pt-2 flex flex-col gap-12">
         <Hero />
-        <Flex align="center" className="px-4 lg:px-12">
+        <Flex align="center" className="px-4 lg:!px-12">
           <InteriorCollections />
           <AboutUs />
           <RoomCollections />

@@ -24,7 +24,7 @@ const ProductCard = ({ src, name, href, price }: ProductCardProps) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Card height="sm" width="full" className="rounded-none">
+      <Card height="md" width="full" className="rounded-none">
         <ProductImage
           src={src}
           name={name}

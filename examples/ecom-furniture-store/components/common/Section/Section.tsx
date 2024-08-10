@@ -16,7 +16,7 @@ const Section = ({
 }: SectionProps) => {
   return (
     <section className={`mt-8 lg:mt-12 flex flex-col  ${className}`} {...rest}>
-      <Column className="gap-1 lg:gap-2">
+      <Column className="gap-1 lg:!gap-2">
         <Text size="1x" className="text-center">
           {subHeading}
         </Text>

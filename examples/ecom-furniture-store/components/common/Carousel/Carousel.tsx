@@ -14,7 +14,7 @@ interface CarouselProps {
 const Carousel = ({ products }: CarouselProps) => {
   return (
     <Section>
-      <div className="gap-4 flex h-[50%] lg:!flex-row flex-col">
+      <div className="gap-8 lg:gap-4 flex h-[50%] lg:!flex-row flex-col">
         {products.map((product) => (
           <ProductCard
             key={product.name}

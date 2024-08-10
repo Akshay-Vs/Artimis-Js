@@ -9,7 +9,10 @@ const TextBlock = ({
   description?: string;
 }) => {
   return (
-    <Column align="center" className="scale-105 gap-6 px-20 text-center">
+    <Column
+      align="center"
+      className="scale-105 gap-6 px-2 lg:!px-20 lg:text-center"
+    >
       <Text size="4x">{title}</Text>
       <Text size="1x" className="flex flex-col gap-4">
         {description

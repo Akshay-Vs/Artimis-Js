@@ -36,7 +36,7 @@ const Works = () => {
       <Column className="gap-24">
         {works.map((work, index) => (
           <Row
-            className={`${index % 2 === 0 ? '' : 'flex-row-reverse'}`}
+            className={`flex-col gap-8 ${index % 2 === 0 ? 'lg:!flex-row' : 'lg:!flex-row-reverse'}`}
             key={index}
           >
             <WorksImage src={work.src} title={work.title} />

@@ -15,7 +15,7 @@ const Hero = () => {
         <Card
           width="full"
           height="full"
-          className="rounded-none bg-transparent scale-[130%] lg:!scale-100"
+          className="rounded-none bg-transparent"
         >
           <motion.div style={{ marginTop }}>
             <Video src="https://video-previews.elements.envatousercontent.com/h264-video-previews/aa08dd9d-1593-4049-8ca5-a4031b828e14/44021676.mp4" />

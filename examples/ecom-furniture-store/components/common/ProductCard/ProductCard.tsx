@@ -20,7 +20,7 @@ const ProductCard = ({ src, name, href, price }: ProductCardProps) => {
   return (
     <Link
       href={href}
-      className="flex flex-col h-full w-full cursor-pointer gap-2"
+      className="flex flex-col lg:h-full w-full cursor-pointer gap-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

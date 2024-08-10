@@ -8,41 +8,33 @@ function App() {
       <div className="flex-center gap-4">
         <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
-        <Button variant="outlined">Outlined</Button>
-        <Button variant="accent">Accent</Button>
+        <Button variant="outline">Outlined</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button variant="destructive">Destructive</Button>
+        <Button variant="link">Link</Button>
       </div>
-
       <div className="flex-center gap-4">
-        <Button size="sm">Primary</Button>
-        <Button variant="secondary" size="md">
-          Secondary
-        </Button>
-        <Button variant="outlined" size="xl">
-          Outlined
-        </Button>
-        <Button variant="accent" size="xxl">
-          Accent
-        </Button>
-      </div>
-
-      <div className="flex-center gap-4">
-        <Button size="sm" radius="sm">
+        <Button variant="default" size="sm">
           Primary
         </Button>
-        <Button variant="secondary" size="md" radius="md">
+        <Button variant="secondary" size="sm">
           Secondary
         </Button>
-        <Button variant="outlined" size="xl" radius="xl">
+        <Button variant="outline" size="sm">
           Outlined
         </Button>
-        <Button variant="accent" size="xxl" radius="xxl">
-          Accent
+        <Button variant="ghost" size="sm">
+          Ghost
         </Button>
-        <Button variant="accent" size="xxl" radius="full">
-          Full
+        <Button variant="destructive" size="sm">
+          Destructive
+        </Button>
+        <Button variant="link" size="sm">
+          Link
         </Button>
       </div>
-      <Button buttonType="icon">Full</Button>
+
+      <Button buttonType="icon">I</Button>
       <DropDown
         title="select"
         radius="full"

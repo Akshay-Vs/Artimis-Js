@@ -50,7 +50,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className="border-none outline-none bg-transparent w-[80%]"
         />
         {icon && (
-          <Button variant={variant} size={size} buttonType="icon">
+          <Button variant="default" size={size} buttonType="icon">
             <FontAwesomeIcon icon={icon} />
           </Button>
         )}

@@ -13,7 +13,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
   args: {
     children: "Hello world",
-    variant: "primary",
+    variant: "default",
     size: "md",
     buttonType: "button",
   },

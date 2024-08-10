@@ -19,7 +19,7 @@ const BoughtTogether = () => {
   ];
   return (
     <Section>
-      <Row className="h-full w-full gap-4">
+      <Row className="h-full w-full gap-4 hidden lg:!flex">
         {group.map((item) => (
           <ProductCard
             href={item.href}
